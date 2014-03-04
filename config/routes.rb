@@ -1,57 +1,16 @@
 Lutgendorf::Application.routes.draw do
+  devise_for :participants
+  devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  
+  scope constraints: { format: 'html' } do
+    get 'navigator/next_content', to: 'navigator#show_next_content', as: 'navigator_next_content'
+    get 'navigator/contexts/:context_name', to: 'navigator#show_context', as: 'navigator_context'
+    get 'navigator/modules/:module_id(/providers/:provider_id/:content_position)', to: 'navigator#show_location', as: 'navigator_location'
+    resource :participant_data, only: [:create, :update]
+    resource :flow, only: :show
+  end
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  root to: 'navigator#show_context'  
+  
 end

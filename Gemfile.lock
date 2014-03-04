@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.3)
       actionpack (= 4.0.3)
@@ -43,6 +44,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -68,8 +73,6 @@ GEM
     execjs (2.0.2)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
-    font-awesome-sass (4.0.3)
-      sass (~> 3.2)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -97,6 +100,11 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -133,6 +141,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
+    redcarpet (2.3.0)
     remotipart (1.2.1)
     rspec-collection_matchers (0.0.3)
       rspec-expectations (>= 2.99.0.beta1)
@@ -204,11 +213,12 @@ DEPENDENCIES
   capybara
   debugger
   devise
-  font-awesome-sass
   jquery-rails
+  paperclip (~> 4.1)
   pg
   rails
   rails_admin
+  redcarpet (~> 2.3.0)
   rspec-rails (~> 3.0.0.beta2)
   sass-rails
   turbolinks

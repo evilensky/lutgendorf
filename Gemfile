@@ -1,5 +1,5 @@
-
-
+source 'https://rubygems.org'
+gem "paperclip", "~> 4.1"
 gem "pg"
 gem "rails"
 gem "sass-rails"
@@ -10,7 +10,9 @@ gem "turbolinks"
 gem "devise"
 gem "rails_admin"
 gem "cancan"
-gem "font-awesome-sass"
+gem 'redcarpet', '~> 2.3.0'
+
+# gem "font-awesome-sass"
 group :development, :test do
   gem "rspec-rails", "~> 3.0.0.beta2"
 end

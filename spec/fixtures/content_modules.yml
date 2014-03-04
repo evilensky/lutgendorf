@@ -1,0 +1,9 @@
+home_landing:
+  title: Landing 
+  context: home
+  position: 1
+
+daily_relaxation:
+  title: ''
+  context: daily_relaxation_practice
+  position: 1

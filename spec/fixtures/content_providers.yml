@@ -1,0 +1,9 @@
+home:
+  type: ContentProviders::Home
+  content_module: home_landing
+  position: 1
+
+daily_relaxation_pre_form:
+  type: ContentProviders::DailyRelaxationPreForm
+  content_module: daily_relaxation
+  position: 1

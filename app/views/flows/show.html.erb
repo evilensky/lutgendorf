@@ -1,0 +1,8 @@
+<% AppSection.all.each do |s| %>
+  <h2><%= s.label %></h2>
+  <ol>
+    <% s.content_modules.each do |m| %>
+      <li><%= m.title %></li>
+    <% end %>
+  </ol>
+<% end %>
