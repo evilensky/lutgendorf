@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304211158) do
+ActiveRecord::Schema.define(version: 20140305163446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,10 @@ ActiveRecord::Schema.define(version: 20140304211158) do
     t.integer  "slideshow_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "relaxation_audio_id"
   end
+
+  add_index "content_releases", ["relaxation_audio_id"], name: "index_content_releases_on_relaxation_audio_id", using: :btree
 
   create_table "daily_journals", force: true do |t|
     t.integer  "average_stress"
