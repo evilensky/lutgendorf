@@ -18,6 +18,11 @@ daily_relaxation_post_form:
   content_module: daily_relaxation_session
   position: 3
 
+end_daily_relaxation:
+  type: ContentProviders::ModuleCompleteProvider
+  content_module: daily_relaxation_session
+  position: 4
+
 daily_relaxation_landing:
   type: ContentProviders::ModuleIndexProvider
   content_module: daily_relaxation_landing
@@ -48,6 +53,11 @@ daily_journal_gratitude:
   content_module: daily_journal
   position: 4
 
+end_daily_journal:
+  type: ContentProviders::ModuleCompleteProvider
+  content_module: daily_journal
+  position: 5
+
 group_session_landing:
   type: ContentProviders::ModuleIndexProvider
   content_module: group_session_landing
@@ -57,6 +67,21 @@ group_session_pre_form:
   type: ContentProviders::GroupSessionPreForm
   content_module: group_session
   position: 1
+
+group_session_post_form:
+  type: ContentProviders::GroupSessionPostForm
+  content_module: group_session
+  position: 2
+
+group_session_detail:
+  type: ContentProviders::GroupSessionDetail
+  content_module: group_session
+  position: 3
+
+end_group_session:
+  type: ContentProviders::ModuleCompleteProvider
+  content_module: group_session
+  position: 4
 
 lesson_landing:
   type: ContentProviders::ModuleIndexProvider

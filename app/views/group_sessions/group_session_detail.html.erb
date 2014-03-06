@@ -1,0 +1,22 @@
+<h1>The way you felt in group today</h1>
+<p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
+
+<%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form"} do |f| %>
+  <div class="form-group">
+      <%= f.label :hope %>
+      <%= f.range_field :hope %>
+      <%= f.label :safety %>
+      <%= f.range_field :safety %>
+      <%= f.label :comfort %>
+      <%= f.range_field :comfort %>
+      <%= f.label :well_being%>
+      <%= f.range_field :well_being %>
+      <%= f.label :clarity %>
+      <%= f.range_field :clarity %>
+      <%= f.label :understanding %>
+      <%= f.range_field :understanding %>
+      <%= f.label :self_confidence %>
+      <%= f.range_field :self_confidence %>
+      <%= f.submit %>
+  </div>
+<%end%>
