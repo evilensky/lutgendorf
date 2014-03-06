@@ -22,3 +22,13 @@ daily_journal_landing:
   title: ''
   context: daily_journal
   position: 1
+
+group_session:
+  title: 'Welcome to your group session assessment'
+  context: webex_session
+  position: 2
+
+group_session_landing:
+  title: ''
+  context: webex_session
+  position: 1

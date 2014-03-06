@@ -1,0 +1,26 @@
+<h1>Please rate your feelings before your group session. Upon submission, you will be directed to you webex meeting.</h1>
+
+<%= form_for GroupSessionMoodSummary.new, url: create_path, :html => {:role => "form"} do |f| %>
+  <div class="form-group">
+      <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
+      <%= f.range_field :pre_anxious %>
+      <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
+      <%= f.range_field :pre_sad %>
+      <%= f.label :pre_confused, "How confused do you feel right now?" %>
+      <%= f.range_field :pre_confused %>
+      <%= f.label :pre_energy, "How energetic do you feel right now?" %>
+      <%= f.range_field :pre_energy %>
+      <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
+      <%= f.range_field :pre_fatigue %>
+    <%= f.submit "Go to your webex session" %>
+  </div>
+<%end%>
+<script>
+  $( document ).ready(function() {
+      $('[name="commit"]').on('click', function(){
+
+        window.open("#{Webex.last.url}")
+
+      });
+  });
+</script>
