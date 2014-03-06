@@ -22,3 +22,28 @@ daily_relaxation_landing:
   type: ContentProviders::ModuleIndexProvider
   content_module: daily_relaxation_landing
   position: 1
+
+daily_journal_landing:
+  type: ContentProviders::ModuleIndexProvider
+  content_module: daily_journal_landing
+  position: 1
+
+daily_journal_average_stress:
+  type: ContentProviders::DailyJournalAverageStress
+  content_module: daily_journal
+  position: 1
+
+daily_journal_average_sleep:
+  type: ContentProviders::DailyJournalAverageSleep
+  content_module: daily_journal
+  position: 2
+
+daily_journal_meaningful:
+  type: ContentProviders::DailyJournalMeaningful
+  content_module: daily_journal
+  position: 3
+
+daily_journal_gratitude:
+  type: ContentProviders::DailyJournalgratitude
+  content_module: daily_journal
+  position: 4

@@ -1,0 +1,9 @@
+<h1>Describe something that felt meaningful for you today</h1>
+<h2 style="color:gray;">a person or event that was important to you</h2>
+<%= form_for daily_journal, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
+  <div class="form-group">
+    <%= f.text_area :meaningful_text, :class => "form-control" %>
+    <%= f.hidden_field :id, :value => daily_journal.id %><br>
+      <%= f.submit "Submit", :class => "form-control btn btn-danger" %>
+  </div>
+<%end%>

@@ -12,3 +12,13 @@ daily_relaxation_landing:
   title: ''
   context: daily_relaxation_practice
   position: 1
+
+daily_journal:
+  title: 'Welcome to your daily journal'
+  context: daily_journal
+  position: 2
+
+daily_journal_landing:
+  title: ''
+  context: daily_journal
+  position: 1

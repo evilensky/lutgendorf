@@ -6,6 +6,7 @@ class Participant < ActiveRecord::Base
 
   has_one :participant_status
   has_many :daily_relaxation_sessions
+  has_many :daily_journals
   has_many :listenings, :through => :daily_relaxation_sessions
 
 

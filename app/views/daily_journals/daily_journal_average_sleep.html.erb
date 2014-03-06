@@ -1,0 +1,8 @@
+<h1>Rate your average quality of sleep last night</h1>
+<%= form_for daily_journal, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
+  <div class="form-group">
+    <%= f.range_field :average_sleep_quality %>
+    <%= f.hidden_field :id, :value => daily_journal.id %>
+    <%= f.submit %>
+  </div>
+<%end%>
