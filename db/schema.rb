@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306191646) do
+ActiveRecord::Schema.define(version: 20140306200533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,40 @@ ActiveRecord::Schema.define(version: 20140306191646) do
   end
 
   add_index "daily_relaxation_sessions", ["participant_id"], name: "index_daily_relaxation_sessions_on_participant_id", using: :btree
+
+  create_table "group_session_mood_details", force: true do |t|
+    t.integer  "hope"
+    t.integer  "safety"
+    t.integer  "comfort"
+    t.integer  "closeness"
+    t.integer  "well_being"
+    t.integer  "clarity"
+    t.integer  "understanding"
+    t.integer  "self_confidence"
+    t.integer  "participant_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "group_session_mood_details", ["participant_id"], name: "index_group_session_mood_details_on_participant_id", using: :btree
+
+  create_table "group_session_mood_summaries", force: true do |t|
+    t.integer  "pre_anxious"
+    t.integer  "pre_sad"
+    t.integer  "pre_confused"
+    t.integer  "pre_energy"
+    t.integer  "pre_fatigue"
+    t.integer  "post_anxious"
+    t.integer  "post_sad"
+    t.integer  "post_confused"
+    t.integer  "post_energy"
+    t.integer  "post_fatigue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "participant_id"
+  end
+
+  add_index "group_session_mood_summaries", ["participant_id"], name: "index_group_session_mood_summaries_on_participant_id", using: :btree
 
   create_table "listenings", force: true do |t|
     t.integer  "daily_relaxation_session_id"
