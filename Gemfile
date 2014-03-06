@@ -11,8 +11,8 @@ gem "devise"
 gem "rails_admin"
 gem "cancan"
 gem 'redcarpet', '~> 2.3.0'
-
-# gem "font-awesome-sass"
+gem 'jplayer-rails'
+gem 'font-awesome-sass-rails'
 group :development, :test do
   gem "rspec-rails", "~> 3.0.0.beta2"
 end
