@@ -8,7 +8,8 @@ class Participant < ActiveRecord::Base
   has_many :daily_relaxation_sessions
   has_many :daily_journals
   has_many :listenings, :through => :daily_relaxation_sessions
-
+  has_many :group_session_mood_details
+  has_many :group_session_mood_summaries
 
   def build_data_record(association, attributes)
     send(association).build(attributes)
