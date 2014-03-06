@@ -3,7 +3,12 @@ home_landing:
   context: home
   position: 1
 
-daily_relaxation:
+daily_relaxation_session:
+  title: 'Welcome to your daily relaxation session'
+  context: daily_relaxation_practice
+  position: 2
+
+daily_relaxation_landing:
   title: ''
   context: daily_relaxation_practice
   position: 1

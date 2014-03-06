@@ -5,5 +5,20 @@ home:
 
 daily_relaxation_pre_form:
   type: ContentProviders::DailyRelaxationPreForm
-  content_module: daily_relaxation
+  content_module: daily_relaxation_session
+  position: 1
+
+relaxation_audio_index:
+  type: ContentProviders::RelaxationAudioIndex
+  content_module: daily_relaxation_session
+  position: 2
+
+daily_relaxation_post_form:
+  type: ContentProviders::DailyRelaxationPostForm
+  content_module: daily_relaxation_session
+  position: 3
+
+daily_relaxation_landing:
+  type: ContentProviders::ModuleIndexProvider
+  content_module: daily_relaxation_landing
   position: 1
