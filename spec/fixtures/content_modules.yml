@@ -32,3 +32,58 @@ group_session_landing:
   title: ''
   context: webex_session
   position: 1
+
+lesson_landing:
+  title: ''
+  context: lesson
+  position: 1
+
+lesson1:
+  title: Chapter 1 (Stress)
+  context: lesson
+  position: 2
+
+lesson2:
+  title: Chapter 2 (Automatic Thoughts)
+  context: lesson
+  position: 3
+
+lesson3:
+  title: Chapter 3 (Rational Thought)
+  context: lesson
+  position: 4
+
+lesson4:
+  title: Chapter 4 (ACT)
+  context: lesson
+  position: 5
+
+lesson5:
+  title: Chapter 5 (Coping)
+  context: lesson
+  position: 6
+
+lesson6:
+  title: Chapter 6 (Social Support)
+  context: lesson
+  position: 7
+
+lesson7:
+  title: Chapter 7 (Communication)
+  context: lesson
+  position: 8
+
+lesson8:
+  title: Chapter 8 (Anger)
+  context: lesson
+  position: 9
+
+lesson9:
+  title: Chapter 9 (Life Goals)
+  context: lesson
+  position: 10
+
+lesson10:
+  title: Chapter 10 (Wrap Up)
+  context: lesson
+  position: 11

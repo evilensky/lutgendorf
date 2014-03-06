@@ -6,10 +6,9 @@ class Slide < ActiveRecord::Base
   validates_uniqueness_of :position, scope: :slideshow_id
 
   def render_body
-  	# 
-    # markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :space_after_headers => true)
-    # markdown.render(body).html_safe
-    render(body).html_safe
+  	
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :space_after_headers => true)
+    markdown.render(body).html_safe
   end
   
 end

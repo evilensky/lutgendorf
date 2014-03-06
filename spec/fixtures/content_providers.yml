@@ -57,3 +57,68 @@ group_session_pre_form:
   type: ContentProviders::GroupSessionPreForm
   content_module: group_session
   position: 1
+
+lesson_landing:
+  type: ContentProviders::ModuleIndexProvider
+  content_module: lesson_landing
+  position: 1
+
+chapter1:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_1 (Slideshow)
+  content_module: lesson1
+  position: 1
+
+chapter2:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_2 (Slideshow)
+  content_module: lesson2
+  position: 1
+
+chapter3:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_3 (Slideshow)
+  content_module: lesson3
+  position: 1
+
+chapter4:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_4 (Slideshow)
+  content_module: lesson4
+  position: 1
+
+chapter5:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_5 (Slideshow)
+  content_module: lesson5
+  position: 1
+
+chapter6:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_6 (Slideshow)
+  content_module: lesson6
+  position: 1
+
+chapter7:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_7 (Slideshow)
+  content_module: lesson7
+  position: 1
+
+chapter8:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_8 (Slideshow)
+  content_module: lesson8
+  position: 1
+
+chapter9:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_9 (Slideshow)
+  content_module: lesson9
+  position: 1
+
+chapter10:
+  type: ContentProviders::SlideshowProvider
+  source_content: lutgendorf_10 (Slideshow)
+  content_module: lesson10
+  position: 1
