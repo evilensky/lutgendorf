@@ -44,6 +44,6 @@ daily_journal_meaningful:
   position: 3
 
 daily_journal_gratitude:
-  type: ContentProviders::DailyJournalgratitude
+  type: ContentProviders::DailyJournalGratitude
   content_module: daily_journal
   position: 4
