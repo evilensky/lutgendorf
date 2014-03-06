@@ -8,7 +8,7 @@ class ContentProviders::GroupSessionPostForm < ContentProvider
   end
 
   def data_attributes
-  []
+  [:post_anxious, :post_sad, :post_confused, :post_energy, :post_fatigue]
   end
 
   def data_class_name
