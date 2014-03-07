@@ -1,7 +1,9 @@
-<%= @navigator.render_current_content(self) %>
+<div class="slideshow">
 
+<%= @navigator.render_current_content(self) %>
+</div>
 <% if @navigator.show_nav_link? %>
-  <p>
-    <%= link_to 'Continue', navigator_next_content_path, class: 'btn btn-default next-button' %>
-  </p>
+
+    <%= link_to 'Continue <i class="icon-chevron-right"></i>'.html_safe, navigator_next_content_path, class: 'btn btn-primary next-button' %>
+
 <% end %>
