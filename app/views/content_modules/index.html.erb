@@ -1,3 +1,7 @@
+<h2>Weekly Sessions</h2>
+
 <% content_modules.each do |m| %>
-  <h2><%= link_to m.title, navigator_location_path(module_id: m.id) %></h2>
+<div class='main-nav-button'>
+  <h3><%= link_to m.title, navigator_location_path(module_id: m.id) %></h3>
+</div>
 <% end %>
