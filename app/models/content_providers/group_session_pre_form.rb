@@ -7,7 +7,7 @@ class ContentProviders::GroupSessionPreForm < ContentProvider
   end
 
   def data_attributes
-  []
+  [:pre_anxious, :pre_sad, :pre_confused, :pre_energy, :pre_fatigue]
   end
 
   def data_class_name

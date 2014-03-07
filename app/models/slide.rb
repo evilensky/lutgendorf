@@ -7,8 +7,8 @@ class Slide < ActiveRecord::Base
 
   def render_body
   	
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :space_after_headers => true)
-    markdown.render(body).html_safe
+    # markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :space_after_headers => true)
+    return body.html_safe
   end
   
 end
