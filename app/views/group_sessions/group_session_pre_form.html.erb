@@ -3,15 +3,15 @@
 <%= form_for GroupSessionMoodSummary.new, url: create_path, :html => {:role => "form"} do |f| %>
   <div class="form-group">
       <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
-      <%= f.range_field :pre_anxious %>
+      <%= f.range_field :pre_anxious, :in => 0..10, :step => '1' %>
       <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
-      <%= f.range_field :pre_sad %>
+      <%= f.range_field :pre_sad, :in => 0..10, :step => '1' %>
       <%= f.label :pre_confused, "How confused do you feel right now?" %>
-      <%= f.range_field :pre_confused %>
+      <%= f.range_field :pre_confused, :in => 0..10, :step => '1' %>
       <%= f.label :pre_energy, "How energetic do you feel right now?" %>
-      <%= f.range_field :pre_energy %>
+      <%= f.range_field :pre_energy, :in => 0..10, :step => '1' %>
       <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
-      <%= f.range_field :pre_fatigue %>
+      <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1' %>
     <%= f.submit "Go to your webex session" %>
   </div>
 <%end%>

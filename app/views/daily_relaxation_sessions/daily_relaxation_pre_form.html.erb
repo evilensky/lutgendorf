@@ -2,7 +2,7 @@
 
 <%= form_for DailyRelaxationSession.new, url: create_path, :html => {:role => "form"} do |f| %>
   <div class="form-group">
-    <%= f.range_field :pre_stress %>
+    <%= f.range_field :pre_stress, :in => 0..10, :step => '1' %>
     <%= f.submit %>
   </div>
 <%end%>

@@ -2,21 +2,29 @@
 <p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
 
 <%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form"} do |f| %>
+  <div class="form-header">
+    <span>A great deal</span>
+    <span>Moderately</span>
+    <span>A little bit</span>
+    <span>A little bit</span>
+    <span>Moderately</span>
+    <span>A great deal</span>
+  </div>
   <div class="form-group">
       <%= f.label :hope %>
-      <%= f.range_field :hope %>
+      <%= f.range_field :hope, :in => 0..5, :step => '1' %>
       <%= f.label :safety %>
-      <%= f.range_field :safety %>
+      <%= f.range_field :safety, :in => 0..5, :step => '1' %>
       <%= f.label :comfort %>
-      <%= f.range_field :comfort %>
+      <%= f.range_field :comfort, :in => 0..5, :step => '1' %>
       <%= f.label :well_being%>
-      <%= f.range_field :well_being %>
+      <%= f.range_field :well_being, :in => 0..5, :step => '1' %>
       <%= f.label :clarity %>
-      <%= f.range_field :clarity %>
+      <%= f.range_field :clarity, :in => 0..5, :step => '1' %>
       <%= f.label :understanding %>
-      <%= f.range_field :understanding %>
+      <%= f.range_field :understanding, :in => 0..5, :step => '1' %>
       <%= f.label :self_confidence %>
-      <%= f.range_field :self_confidence %>
+      <%= f.range_field :self_confidence, :in => 0..5, :step => '1' %>
       <%= f.submit %>
   </div>
 <%end%>

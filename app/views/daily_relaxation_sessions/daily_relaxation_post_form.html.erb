@@ -2,7 +2,7 @@
 <%= daily_relaxation_session.id %>
 <%= form_for daily_relaxation_session, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
   <div class="form-group">
-    <%= f.range_field :post_stress %>
+    <%= f.range_field :post_stress, :in => 0..10, :step => '1' %>
     <%= f.hidden_field :id, :value => daily_relaxation_session.id %>
     <%= f.submit %>
   </div>
