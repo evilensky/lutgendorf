@@ -27,6 +27,15 @@ class AppSection
     SECTIONS[@name.to_sym]
   end
 
+  #method to determine if qualtrics assessment should be visible
+  def qualtrics_visible?(current_participant)
+    if Date.today - current_participant.study_start_date < 7 || Date.today - current_participant.study_start_date > 70
+      return true
+    else
+      return false
+    end
+  end
+
   def content_modules
     ContentModule.where(context: @name)
   end

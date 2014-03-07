@@ -9,7 +9,9 @@
     <div class="row">
       <div class="col-md-12">
         <% AppSection.all.each do |s| %>
-          <%= link_to "<div class='main-nav-button'>#{ s.label } </div>".html_safe, navigator_context_path(context_name: s.slug)%>
+          <div class='main-nav-button'>
+            <%= link_to_unless(s.label == "Qualtrics", "#{ s.label }".html_safe, navigator_context_path(context_name: s.slug)) %>
+          </div>
         <% end %>
     </div>
   </div>
