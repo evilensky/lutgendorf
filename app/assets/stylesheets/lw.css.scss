@@ -1,14 +1,15 @@
-body,html{font-family: 'Oswald', sans-serif !important; background:url("/images/background.jpg");}
+body,html{font-family: 'Oswald', sans-serif !important; background:url("/images/background.jpg"); color:white;}
 .main-nav {padding-top:1em;}
 
 .well {background-color:rgba(255,255,255,0.5);}
 
-.main-nav a {display:block; font-size:3em; text-transform: uppercase; color:black;margin:0;padding-right:40px;}
-.main-nav a:hover {text-decoration: none; color:#AAA;}
+.main-nav a {display:block; font-size:3em; text-transform: uppercase; color:white; margin:0;padding-right:40px;}
+.main-nav a:hover {text-decoration: none; color:black;}
 .main-content {text-align: left;}
 .main-content h2 {margin-top:.5em; display:block;}
 
 .main-nav-button {width:18%; margin-right:1%; margin-left:1%; float:left; font-size:.8em;}
+
 .tool-nav {}
 .tool-nav h1 {}
 .tool-nav h2 {}
