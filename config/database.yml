@@ -55,7 +55,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: lutgendorf_production
   pool: 5
-  user: 'lutgendorf_user'
-  password: 'yoGrutObCont2droaWrecjouk'
+  username: <%= ENV['lutgendorf_db_username'] %>
+  password: <%= ENV['lutgendorf_db_password'] %>

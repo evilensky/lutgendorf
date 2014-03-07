@@ -1,5 +1,5 @@
-<h1>Please rate your feelings before your group session. Upon submission, you will be directed to you webex meeting.</h1>
-
+<h1>Please rate your feelings before your group session. Upon submission, you will be directed to your webex meeting.</h1>
+<br>
 <%= form_for GroupSessionMoodSummary.new, url: create_path, :html => {:role => "form"} do |f| %>
   <div class="form-group">
       <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
@@ -12,7 +12,7 @@
       <%= f.range_field :pre_energy, :in => 0..10, :step => '1' %>
       <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
       <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1' %>
-    <%= f.submit "Go to your webex session" %>
+    <%= f.submit "Go to your webex session", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>
 <script>

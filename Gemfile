@@ -17,8 +17,10 @@ group :development, :test do
   gem "rspec-rails", "~> 3.0.0.beta2"
 end
 
+gem 'capistrano', '~> 2.15.5', group: :development
+gem 'rvm-capistrano'
+
 group :development do
-  gem "capistrano"
   gem "debugger"
 end
 
