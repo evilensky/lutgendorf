@@ -57,5 +57,5 @@ production:
   encoding: unicode
   database: lutgendorf_production
   pool: 5
-  username: lutgendorf
-  password:
+  user: 'lutgendorf_user'
+  password: 'yoGrutObCont2droaWrecjouk'
