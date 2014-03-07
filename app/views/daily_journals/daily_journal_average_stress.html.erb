@@ -3,6 +3,6 @@
 <%= form_for DailyJournal.new, url: create_path, :html => {:role => "form"} do |f| %>
   <div class="form-group">
     <%= f.range_field :average_stress, :in => 0..10, :step => '1' %>
-    <%= f.submit %>
+    <%= f.submit :class => "form-control btn btn-primary"%>
   </div>
 <%end%>
