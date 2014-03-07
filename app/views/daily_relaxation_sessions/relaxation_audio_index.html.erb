@@ -1,36 +1,30 @@
 <h1>Instructions</h1>
-<select class="form-control">
+
+<ul class="audio-list" style="list-style-type:none;">
 <% audio_files.each do |file| %>
-  <option data-id="<%=file.id%>" value="<%=file.sound_file%>"><%=file.title%></option>
-<%end%>
-</select>
-
-
-<div id="jquery_jplayer_1" data-audio-path=""></div>
-<div id="jp_container_1" class="jp-container">
-  <div style="display:inline-block;width:45px;">
-    <a href="#" class="jp-play" style="font-size:40px;"><i class="icon-play"></i></a>
-    <a href="#" class="jp-pause" style="font-size:40px;"><i class="icon-pause"></i></a>
-  </div>
-</div>
+  <li>
+      <table>
+        <tr>
+          <td style="width:300px;"><h2><%=file.title%><i class="icon-caret-right icon-2x" style="position:relative;bottom:-10px;"></i></h2></td>
+          <td>
+            <audio src="<%=file.sound_file%>" data-id="<%=file.id%>" controls type="audio/mpeg" style="position:relative;bottom:-15px;">
+              Your browser does not support the audio element.
+            </audio>
+          </td>
+        </tr>
+      </table>
+  </li>
+<% end %>
+</ul>
 
 <script>
   $(document).ready(function() {
 
-    initAudioPlayer();
-
-    $('select').on("change", function(){
-
-      ready($(this).find(":selected").val())
-
-    });
-
-    $('.jp-play').on("click", function(){
-
+    $('audio').on("click", function(){
       $.ajax({
         url: "<%= create_path %>",
         type: "POST",
-        data: {"listening":{'relaxation_audio_id': $('select').find(":selected").data("id"), 'daily_relaxation_session_id': "<%=current_relaxation_session.id%>"}}
+        data: {"listening":{'relaxation_audio_id': $(this).data("id"), 'daily_relaxation_session_id': "<%=current_relaxation_session.id%>"}}
       });
     });
   });

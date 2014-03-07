@@ -1,7 +1,7 @@
-<h2>Weekly Sessions</h2>
+<h2>Select Your Content Below</h2>
 
 <% content_modules.each do |m| %>
-<div class='main-nav-button'>
+<div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
   <h3><%= link_to m.title, navigator_location_path(module_id: m.id) %></h3>
 </div>
 <% end %>

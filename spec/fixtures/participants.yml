@@ -2,3 +2,8 @@ participant1:
   email: participant1@example.com
   encrypted_password: <%= Participant.new.send(:password_digest, 'secrets!') %>
   study_start_date: <%= 5.day.ago.to_s(:db) %>
+
+participant_8_days_in_study:
+  email: participant8@example.com
+  encrypted_password: <%= Participant.new.send(:password_digest, 'secrets!') %>
+  study_start_date: <%= 8.day.ago.to_s(:db) %>

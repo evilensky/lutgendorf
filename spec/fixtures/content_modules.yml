@@ -4,7 +4,7 @@ home_landing:
   position: 1
 
 daily_relaxation_session:
-  title: 'Welcome to your daily relaxation session'
+  title: 'Daily Relaxation Session'
   context: daily_relaxation_practice
   position: 2
 
@@ -14,7 +14,7 @@ daily_relaxation_landing:
   position: 1
 
 daily_journal:
-  title: 'Welcome to your daily journal'
+  title: 'Daily Journal'
   context: daily_journal
   position: 2
 
@@ -24,7 +24,7 @@ daily_journal_landing:
   position: 1
 
 group_session:
-  title: 'Welcome to your group session assessment'
+  title: 'Group Session'
   context: webex_session
   position: 2
 

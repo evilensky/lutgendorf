@@ -1,7 +1,11 @@
 <h1>Please rate your feelings now that your group session has been completed.</h1>
 
 <%= form_for group_session_mood_summary, url: update_path, :html => {:role => "form"} do |f| %>
-  <div class="form-group">
+  <div class="row form-labels">
+    <div class="col-md-6">Not at all</div>
+    <div class="col-md-6">Extremely</div>
+  </div>
+  <div class="form-group multi-slide">
       <%= f.label :post_anxious, "How anxious do you feel right now?" %>
       <%= f.range_field :post_anxious, :in => 0..10, :step => '1'  %>
       <%= f.label :post_sad, "How sad or depressed do you feel right now?" %>

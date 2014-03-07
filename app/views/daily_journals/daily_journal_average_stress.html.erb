@@ -1,6 +1,11 @@
-<h1>Rate your average level of stress today</h1>
+<h1>Rate your average level of stress today</h1><br>
 
 <%= form_for DailyJournal.new, url: create_path, :html => {:role => "form"} do |f| %>
+  <div class="row form-labels">
+    <div class="col-md-4">No Stress</div>
+    <div class="col-md-4">Moderately Stressed</div>
+    <div class="col-md-4">Extremely Stressed</div>
+  </div>
   <div class="form-group">
     <%= f.range_field :average_stress, :in => 0..10, :step => '1' %>
     <%= f.submit :class => "form-control btn btn-primary"%>
