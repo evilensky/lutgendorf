@@ -13,7 +13,7 @@
       <%= f.label :post_fatigue, "How fatigued do you feel right now?" %>
       <%= f.range_field :post_fatigue, :in => 0..10, :step => '1' %>
       <%= f.hidden_field :id, :value => group_session_mood_summary.id %>
-    <%= f.submit "Start WebEx Session" :class => "form-control btn btn-primary"%>
+    <%= f.submit "Continue", :class => "form-control btn btn-primary"%>
    </div>
 <%end%>
 <script>

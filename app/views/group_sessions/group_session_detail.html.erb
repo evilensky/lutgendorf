@@ -2,13 +2,14 @@
 <p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
 
 <%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form"} do |f| %>
-  <div class="form-header">
+  <div class="form-header range-labels">
     <span>A great deal</span>
     <span>Moderately</span>
     <span>A little bit</span>
     <span>A little bit</span>
     <span>Moderately</span>
     <span>A great deal</span>
+    <br>
   </div>
   <div class="form-group">
       <%= f.label :hope %>

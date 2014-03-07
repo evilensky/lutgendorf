@@ -1,5 +1,5 @@
 <h1>Using the following scale, rate your stress level right now after you have practiced your relaxation session</h1>
-<%= daily_relaxation_session.id %>
+
 <%= form_for daily_relaxation_session, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
   <div class="form-group">
     <%= f.range_field :post_stress, :in => 0..10, :step => '1' %>
