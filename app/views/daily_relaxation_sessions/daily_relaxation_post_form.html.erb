@@ -9,6 +9,6 @@
   <div class="form-group">
     <%= f.range_field :post_stress, :in => 0..10, :step => '1' %>
     <%= f.hidden_field :id, :value => daily_relaxation_session.id %>
-    <%= f.submit :class => "form-control btn btn-primary"%>
+    <%= f.submit "Continue", :class => "form-control btn btn-primary"%>
   </div>
 <%end%>
