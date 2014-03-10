@@ -1,17 +1,23 @@
-body,html{font-family: 'Oswald', sans-serif !important; background:url("/images/background.jpg"); color:white; padding-top:1.5em;}
+body,html{font-family: 'Oswald', sans-serif !important; background-image: url(image_path('calm-blue-water.jpg')); color:white; padding-top:1.5em;}
 
 .well {background-color:rgba(255,255,255,0.5);}
 
-.slideshow {background-color:rgba(255,255,255,0.25); padding:2em; border-radius:1em;}
+.slideshow {background-color:rgba(0, 0, 0, 0.25); padding:2em; border-radius:1em;}
 
 .main-nav a {display:block; font-size:3em; text-transform: uppercase; color:white; margin:0;}
 .main-nav a:hover {text-decoration: none; color:black;}
 .main-content {text-align: left;}
 .main-content h2 {margin-top:.5em; display:block;}
 
-.main-nav-button {width:23%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
+.main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
 
-a.qualtrics-link {position:absolute; top:-57%; right:5%}
+.main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
+
+a.qualtrics-link .main-nav-button {
+  position:absolute;
+  right:12px;
+  top:-183px;
+}
 
 .tool-nav {}
 .tool-nav h1 {}
@@ -32,6 +38,16 @@ input.form-button {
 	position:absolute;
 	top:15px;
 	left:15px;
+}
+
+#home_nav a{
+  color:darkslateblue;
+  font-size: 140%;
+}
+
+#auth_nav a{
+  color:darkslateblue;
+  font-size: 140%;
 }
 
 #main-layout {
@@ -125,4 +141,13 @@ div.form-labels {
 
 div.multi-slide input {
   margin-bottom: 10px;
+}
+#daily_journal {
+  background-image: url(image_path('yosemite-1.jpeg'));
+  background-size: 100%;
+}
+#daily_relaxation_practice {
+  background-image: url(image_path('woman-meditating.jpg'));
+  background-size: 100%;
+  background-position: center;
 }

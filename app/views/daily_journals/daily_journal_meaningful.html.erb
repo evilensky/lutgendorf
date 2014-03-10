@@ -1,5 +1,5 @@
-<h1>Describe something that felt meaningful for you today</h1>
-<h2 style="color:gray;">a person or event that was important to you</h2>
+<h1>Describe a meaningful moment: </h1>
+<h3 style="color:darkslateblue;">This could be something that gave you strength, or joy, or something you felt grateful for today.</h3><br>
 <%= form_for daily_journal, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
   <div class="form-group">
     <%= f.text_area :meaningful_text, :class => "form-control" %>

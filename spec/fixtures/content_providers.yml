@@ -23,16 +23,6 @@ end_daily_relaxation:
   content_module: daily_relaxation_session
   position: 4
 
-daily_relaxation_landing:
-  type: ContentProviders::ModuleIndexProvider
-  content_module: daily_relaxation_landing
-  position: 1
-
-daily_journal_landing:
-  type: ContentProviders::ModuleIndexProvider
-  content_module: daily_journal_landing
-  position: 1
-
 daily_journal_average_stress:
   type: ContentProviders::DailyJournalAverageStress
   content_module: daily_journal
@@ -48,15 +38,10 @@ daily_journal_meaningful:
   content_module: daily_journal
   position: 3
 
-daily_journal_gratitude:
-  type: ContentProviders::DailyJournalGratitude
-  content_module: daily_journal
-  position: 4
-
 end_daily_journal:
   type: ContentProviders::ModuleCompleteProvider
   content_module: daily_journal
-  position: 5
+  position: 4
 
 group_session_landing:
   type: ContentProviders::ModuleIndexProvider

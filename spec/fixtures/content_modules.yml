@@ -6,30 +6,15 @@ home_landing:
 daily_relaxation_session:
   title: 'Daily Relaxation Session'
   context: daily_relaxation_practice
-  position: 2
-
-daily_relaxation_landing:
-  title: ''
-  context: daily_relaxation_practice
   position: 1
 
 daily_journal:
   title: 'Daily Journal'
   context: daily_journal
-  position: 2
-
-daily_journal_landing:
-  title: ''
-  context: daily_journal
   position: 1
 
 group_session:
   title: 'Group Session'
-  context: webex_session
-  position: 2
-
-group_session_landing:
-  title: ''
   context: webex_session
   position: 1
 

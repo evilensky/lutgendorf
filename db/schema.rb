@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307005937) do
+ActiveRecord::Schema.define(version: 20140310200020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20140307005937) do
     t.integer  "average_stress"
     t.integer  "average_sleep_quality"
     t.text     "meaningful_text"
-    t.text     "gratitude_text"
     t.integer  "participant_id"
     t.datetime "created_at"
     t.datetime "updated_at"
