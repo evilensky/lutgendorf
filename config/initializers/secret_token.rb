@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Lutgendorf::Application.config.secret_key_base = 'f7968e5d09f66ce4273f9b5ac5fee15de016d58de16d2ac5dd32315f9ee04a97c4d29a6eeb5b7374f3ad4f48babdc653c6e9ca698e2050fa336644ecaedbcfb2'
+Lutgendorf::Application.config.secret_key_base = '5d3ec88e5f18aa0374bed63ad610aa2f4ae4bc70c6f2d02ed5883da08ce1e86d48d73edc118b14b861f6e10b28207efd414d82e9e68d52f036351aa2a88af8c6'
