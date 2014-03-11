@@ -36,6 +36,17 @@ after "deploy:set_owner", "deploy:restart"
 namespace :db do
 end
 
+after "deploy:update_code", "paperclip:symlink"
+ 
+namespace :paperclip do
+  desc "Create symlink"
+  task :symlink do
+    run "rm -rf #{release_path}/public/system"
+    run "mkdir -p #{shared_path}/system"
+    run "ln -nfs #{shared_path}/system #{release_path}/public/system"
+  end
+end
+
 
 task :copy_secret_token, :except => { :no_release => true }, :role => :app do
   run "cp -f ~/#{application}_secret_token.rb #{release_path}/config/initializers/secret_token.rb"
