@@ -13,7 +13,10 @@
             <%= link_to("<div class='main-nav-button home' id='#{s.slug}'>#{ s.label }</div>".html_safe, navigator_context_path(context_name: s.slug)) %>
             <%end%>
             
-            
+            <% if s.label == "Qualtrics" && s.qualtrics_visible?(current_participant) %>
+              <%= link_to("<div class='main-nav-button home'> #{ s.label }</div>".html_safe, "http://google.com", :class=> 'qualtrics-link') %>
+            </div>
+            <% end%>
         <% end %>
     </div>
   </div>

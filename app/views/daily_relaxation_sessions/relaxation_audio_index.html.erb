@@ -22,7 +22,7 @@
 
     $('audio').on("click", function(){
       $.ajax({
-        url: "<%= create_path %>",
+        url: "<%= create_path %>.js",
         type: "POST",
         data: {"listening":{'relaxation_audio_id': $(this).data("id"), 'daily_relaxation_session_id': "<%=current_relaxation_session.id%>"}}
       });

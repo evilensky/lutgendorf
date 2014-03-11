@@ -1,4 +1,5 @@
 class NavigatorController < ApplicationController
+  before_filter :authenticate_participant!
   include Concerns::NavigatorEnabled
 
   before_action :instantiate_navigator
