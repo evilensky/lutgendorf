@@ -1,30 +1,42 @@
 <h1>Please rate your feelings before your group session. Upon submission, you will be directed to your webex meeting.</h1>
 <br>
 <%= form_for GroupSessionMoodSummary.new, url: create_path, :html => {:role => "form"} do |f| %>
-  <div class="row form-labels">
-    <div class="col-md-6">Not at all</div>
-    <div class="col-md-6">Extremely</div>
-  </div>
-  <div class="form-group">
+  <div class="form-group" style="background-color:white;padding:15px;border-radius:5px;">
+    <div class="row form-labels">
+      <div class="col-md-6">Not at all</div>
+      <div class="col-md-6">Extremely</div>
+    </div>
       <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
-      <%= f.range_field :pre_anxious, :in => 0..10, :step => '1' %>
+      <%= f.range_field :pre_anxious, :in => 0..10, :step => '1', :id => 'pre_anxious' %>
       <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
-      <%= f.range_field :pre_sad, :in => 0..10, :step => '1' %>
+      <%= f.range_field :pre_sad, :in => 0..10, :step => '1', :id => 'pre_sad' %>
       <%= f.label :pre_confused, "How confused do you feel right now?" %>
-      <%= f.range_field :pre_confused, :in => 0..10, :step => '1' %>
+      <%= f.range_field :pre_confused, :in => 0..10, :step => '1', :id => 'pre_confused' %>
       <%= f.label :pre_energy, "How energetic do you feel right now?" %>
-      <%= f.range_field :pre_energy, :in => 0..10, :step => '1' %>
+      <%= f.range_field :pre_energy, :in => 0..10, :step => '1', :id => 'pre_energy' %>
       <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
-      <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1' %>
+      <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1', :id => 'pre_fatigue' %>
     <%= f.submit "Go to your webex session", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>
 <script>
-  // $( document ).ready(function() {
-  //     $('[name="commit"]').on('click', function(){
+  $( document ).ready(function() {
 
-  //       window.open("#{Webex.last.url}")
+    $.each($('[type="range"]'), function (index, el){
 
-  //     });
-  // });
+      $(el).ionRangeSlider({
+        min:0,
+        max:10,
+        type:"single",
+        step:1,
+        hasGrid:true
+      });
+
+    });
+      // $('[name="commit"]').on('click', function(){
+
+      //   window.open("#{Webex.last.url}")
+
+      // });
+  });
 </script>

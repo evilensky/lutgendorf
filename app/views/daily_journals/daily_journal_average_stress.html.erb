@@ -1,13 +1,24 @@
 <h1>Rate your average level of stress today</h1><br>
 
 <%= form_for DailyJournal.new, url: create_path, :html => {:role => "form"} do |f| %>
-  <div class="row form-labels">
-    <div class="col-md-4">No Stress</div>
-    <div class="col-md-4">Moderately Stressed</div>
-    <div class="col-md-4">Extremely Stressed</div>
-  </div>
-  <div class="form-group">
-    <%= f.range_field :average_stress, :in => 0..10, :step => '1' %>
-    <%= f.submit "Continue", :class => "form-control btn btn-primary"%>
+  <div class="form-group" style="background-color:white;padding:15px;border-radius:3px;">
+    <div class="row form-labels">
+      <div class="col-md-4">No Stress</div>
+      <div class="col-md-4">Moderately Stressed</div>
+      <div class="col-md-4">Extremely Stressed</div>
+    </div>
+    <%= f.range_field :average_stress, :in => 0..10, :step => '1', :id => "range" %><Br/>
+    <%= f.submit "Continue", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>
+<script>
+ $(document).ready(function() {
+  $('#range').ionRangeSlider({
+    min:0,
+    max:10,
+    type:"single",
+    step:1,
+    hasGrid:true
+  });
+});
+</script>
