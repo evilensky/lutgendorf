@@ -43,11 +43,6 @@ end_daily_journal:
   content_module: daily_journal
   position: 4
 
-group_session_landing:
-  type: ContentProviders::ModuleIndexProvider
-  content_module: group_session_landing
-  position: 1
-
 group_session_pre_form:
   type: ContentProviders::GroupSessionPreForm
   content_module: group_session
