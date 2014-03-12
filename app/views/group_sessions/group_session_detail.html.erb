@@ -1,7 +1,7 @@
 <h1>The way you felt in group today</h1>
 <p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
 
-<%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;"} do |f| %>
+<%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;background-color:white;padding:30px;border-radius:5px;color:gray"} do |f| %>
   <div class="form-header range-labels">
     <span>A great deal</span>
     <span>Moderately</span>
@@ -102,3 +102,19 @@
       <%= f.submit :class => "form-control btn btn-primary"%>
   </div>
 <%end%>
+
+<script>
+  $( document ).ready(function() {
+
+    $.each($('[type="range"]'), function (index, el){
+      $(el).ionRangeSlider({
+        min:0,
+        max:5,
+        type:"single",
+        step:1,
+        hideMinMax: true
+      });
+    });
+
+  });
+</script>
