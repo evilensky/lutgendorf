@@ -5,5 +5,9 @@
     <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
       <h3><%= link_to m.title, navigator_location_path(module_id: m.id)%></h3>
     </div>
+  <% else %>
+    <div class="disabled-nav main-nav-button">
+      <h3><%= m.title %></h3>
+    </div>
   <% end %>
 <% end %>
