@@ -3,19 +3,49 @@
 <%= form_for GroupSessionMoodSummary.new, url: create_path, :html => {:role => "form"} do |f| %>
   <div class="form-group" style="background-color:white;padding:15px;border-radius:5px;">
     <div class="row form-labels">
-      <div class="col-md-6">Not at all</div>
+      <div class="col-md-3 col-md-offset-3">Not at all</div>
       <div class="col-md-6">Extremely</div>
     </div>
-      <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
-      <%= f.range_field :pre_anxious, :in => 0..10, :step => '1', :id => 'pre_anxious' %>
-      <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
-      <%= f.range_field :pre_sad, :in => 0..10, :step => '1', :id => 'pre_sad' %>
-      <%= f.label :pre_confused, "How confused do you feel right now?" %>
-      <%= f.range_field :pre_confused, :in => 0..10, :step => '1', :id => 'pre_confused' %>
-      <%= f.label :pre_energy, "How energetic do you feel right now?" %>
-      <%= f.range_field :pre_energy, :in => 0..10, :step => '1', :id => 'pre_energy' %>
-      <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
-      <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1', :id => 'pre_fatigue' %>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :pre_anxious, :in => 0..10, :step => '1', :id => 'pre_anxious' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :pre_sad, :in => 0..10, :step => '1', :id => 'pre_sad' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :pre_confused, "How confused do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :pre_confused, :in => 0..10, :step => '1', :id => 'pre_confused' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :pre_energy, "How energetic do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :pre_energy, :in => 0..10, :step => '1', :id => 'pre_energy' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :pre_fatigue, :in => 0..10, :step => '1', :id => 'pre_fatigue' %>
+      </div>
+    </div>
     <%= f.submit "Go to your webex session", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>

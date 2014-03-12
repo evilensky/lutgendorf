@@ -1,22 +1,52 @@
 <h1>Please rate your feelings now that your group session has been completed.</h1>
 
 <%= form_for group_session_mood_summary, url: update_path, :html => {:role => "form"} do |f| %>
-<div class="form-group" style="background-color:white;padding:15px;border-radius:5px;">
+  <div class="form-group" style="background-color:white;padding:15px;border-radius:5px;">
     <div class="row form-labels">
-      <div class="col-md-6">Not at all</div>
+      <div class="col-md-3 col-md-offset-3">Not at all</div>
       <div class="col-md-6">Extremely</div>
     </div>
-      <%= f.label :post_anxious, "How anxious do you feel right now?" %>
-      <%= f.range_field :post_anxious, :in => 0..10, :step => '1', :id => 'post_anxious' %>
-      <%= f.label :post_sad, "How sad or depressed do you feel right now?" %>
-      <%= f.range_field :post_sad, :in => 0..10, :step => '1', :id => 'post_sad' %>
-      <%= f.label :post_confused, "How confused do you feel right now?" %>
-      <%= f.range_field :post_confused, :in => 0..10, :step => '1', :id => 'post_confused' %>
-      <%= f.label :post_energy, "How energetic do you feel right now?" %>
-      <%= f.range_field :post_energy, :in => 0..10, :step => '1', :id => 'post_energy' %>
-      <%= f.label :post_fatigue, "How fatigued do you feel right now?" %>
-      <%= f.hidden_field :id, :value => group_session_mood_summary.id %>
-      <%= f.range_field :post_fatigue, :in => 0..10, :step => '1', :id => 'post_fatigue' %>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :post_anxious, "How anxious do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :post_anxious, :in => 0..10, :step => '1', :id => 'post_anxious' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :post_sad, "How sad or depressed do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :post_sad, :in => 0..10, :step => '1', :id => 'post_sad' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :post_confused, "How confused do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :post_confused, :in => 0..10, :step => '1', :id => 'post_confused' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :post_energy, "How energetic do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :post_energy, :in => 0..10, :step => '1', :id => 'post_energy' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <%= f.label :post_fatigue, "How fatigued do you feel right now?" %>
+      </div>
+      <div class="col-md-9"> 
+        <%= f.range_field :post_fatigue, :in => 0..10, :step => '1', :id => 'post_fatigue' %>
+      </div>
+    </div>
+    <%= f.hidden_field :id, :value => group_session_mood_summary.id %>
     <%= f.submit "Continue", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>

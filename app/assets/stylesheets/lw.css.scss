@@ -151,7 +151,17 @@ div.form-labels {
   margin-bottom: 25px;
 }
 div.form-group label{
-  color:gray;
+  position: relative;
+  top: 15px;
+  background: darkgrey;
+  padding: 5px;
+  border-radius: 4px;
+  color:floralwhite;
+  text-align:center;
+  font-weight:inherit;
+}
+div.form-group .row {
+  margin-bottom: 30px;
 }
 
 div.multi-slide input {
