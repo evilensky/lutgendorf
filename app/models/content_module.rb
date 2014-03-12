@@ -1,4 +1,6 @@
 class ContentModule < ActiveRecord::Base
+  include SharedMethods
+
   has_many :providers, -> { order 'position' }, class_name: 'ContentProvider', dependent: :destroy
   has_one :content_release
 
@@ -15,13 +17,4 @@ class ContentModule < ActiveRecord::Base
   def provider_exists?(position)
     providers.exists?(position: position)
   end
-
-  def is_released?(participant)
-    if content_release
-      Date.today - participant.study_start_date.to_date >= content_release.release_date * 7 rescue true
-    else
-      true
-    end
-  end
-
 end
