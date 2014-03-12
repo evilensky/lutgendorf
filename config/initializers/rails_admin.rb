@@ -1,4 +1,5 @@
 RailsAdmin.config do |config|
+  config.main_app_name = ["LiveWell"]
 
   ### Popular gems integration
 
@@ -31,4 +32,27 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ParticipantStatus", "ContentRelease", "ContentModule", "ContentProvider"]
+
+  config.model 'Webex' do
+    label "Webex Session Date" 
+    label_plural "Webex Session Dates"
+  end
+
+  config.model Slide do
+    
+    parent Slideshow
+
+    edit do
+      field :title
+      field :body, :wysihtml5 do
+        config_options :html => true
+      end
+      field :slideshow 
+      field :position
+      field :is_title_visible
+    end
+  end
+
 end
