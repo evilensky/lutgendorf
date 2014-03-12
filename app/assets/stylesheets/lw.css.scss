@@ -103,13 +103,13 @@ input[type='range']::-webkit-slider-thumb {
  .btn {margin-top:1em;}
 
  div.range-labels {
-  margin-left: 12%;
+  margin-left: 17%;
   margin-bottom: 20px;
   color:cornflowerblue;
 }
 
 div.range-labels span {
-  margin-right: 9%;
+  margin-right: 7%;
 }
 
 div.slider-group {
@@ -118,6 +118,19 @@ div.slider-group {
 
 div.slider-group .irs-single {
   background-color: white;
+}
+
+div.slider-group.row {
+  margin: 10px 0px 10px 0px;
+}
+div.slider-group .col-md-2 {
+  position: relative;
+  top: 15px;
+  background: darkgrey;
+  padding: 5px;
+  border-radius: 4px;
+  color:floralwhite;
+  text-align:center;
 }
 
 div.form-labels div{

@@ -1,7 +1,7 @@
 <h1>The way you felt in group today</h1>
 <p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
 
-<%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;background-color:white;padding:30px;border-radius:5px;color:gray"} do |f| %>
+<%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;background-color:white;padding:30px;border-radius:5px;"} do |f| %>
   <div class="form-header range-labels">
     <span>A great deal</span>
     <span>Moderately</span>
@@ -12,94 +12,94 @@
     <br>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>hopeless</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :hope, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>hopeful</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>vulnerable</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :safety, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>safe</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>uncomfortable</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :comfort, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>comfortable</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>like a stranger</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :closeness, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>close to others</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>miserable</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :well_being, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>feeling good</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>confused</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :clarity, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>seeing clearly</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>misunderstood</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :understanding, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>understood</span>
     </div>
   </div>
   <div class="slider-group row">
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='left-text'>uncertain</span>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= f.range_field :self_confidence, :in => 0..5, :step => '1' %>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-2">
       <span class='right-text'>self-confident</span>
     </div>
   </div>
-      <%= f.submit :class => "form-control btn btn-primary"%>
+      <%= f.submit "Finish", :class => "form-control btn btn-primary"%>
   </div>
 <%end%>
 
