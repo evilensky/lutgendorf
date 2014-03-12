@@ -8,7 +8,7 @@ class ContentProviders::DailyJournalAverageSleep < ContentProvider
   end
 
   def data_attributes
-  [:average_sleep_quality, :id]
+    [:average_sleep_quality, :id]
   end
 
   def data_class_name

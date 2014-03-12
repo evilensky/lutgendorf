@@ -1,7 +1,9 @@
 <h2>Select Content</h2>
 
 <% content_modules.each do |m| %>
-<div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
-  <h3><%= link_to m.title, navigator_location_path(module_id: m.id) %></h3>
-</div>
+  <% if m.is_released?(current_participant) %>
+    <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
+      <h3><%= link_to m.title, navigator_location_path(module_id: m.id)%></h3>
+    </div>
+  <% end %>
 <% end %>
