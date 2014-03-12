@@ -65,7 +65,7 @@
     });
       $('[name="commit"]').on('click', function(){
 
-        window.open("<%=Webex.last.url%>")
+        window.open("<%= Webex.next_webex_session %>")
 
       });
   });
