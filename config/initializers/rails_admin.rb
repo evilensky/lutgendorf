@@ -33,9 +33,25 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ParticipantStatus", "ContentRelease", "ContentModule", "ContentProvider"]
+  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ParticipantStatus", "ContentRelease", "ContentModule", "ContentProvider", "VideoSlide"]
 
-  config.model 'Webex' do
+  config.model Participant do
+    
+    object_label_method :email
+
+    list do
+      field :email
+      field :id
+      field :study_start_date
+    end
+    
+  end
+  
+  def email
+    return "#{self.email}"
+  end
+
+  config.model Webex do
     label "Webex Session Date" 
     label_plural "Webex Session Dates"
   end
