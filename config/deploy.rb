@@ -76,16 +76,26 @@ namespace :deploy do
   task :create_vhost, :roles => :web do
     vhost_config =<<-EOF
 <VirtualHost *:80>
-  ServerName cbits-railsapps.nubic.northwestern.edu
+  ServerName lutgendorf.northwestern.edu
+  Redirect permanent / https://lutgendorf.northwestern.edu/
+</VirtualHost>
+
+<VirtualHost *:443>
+  ServerName lutgendorf.northwestern.edu
+
+  SSLEngine On
+  SSLCertificateFile /etc/pki/tls/certs/cbits-railsapps.nubic.northwestern.edu.crt
+  SSLCertificateChainFile /etc/pki/tls/certs/komodo_intermediate_ca.crt
+  SSLCertificateKeyFile /etc/pki/tls/private/cbits-railsapps.nubic.northwestern.edu.key
 
   DocumentRoot #{deploy_to}/current/public
   RailsBaseURI /
   PassengerDebugLogFile /var/log/httpd/#{application}_passenger.log
 
-    <Directory #{deploy_to}/current/public >
-      Allow from all
-      Options -MultiViews
-    </Directory>
+  <Directory #{deploy_to}/current/public >
+    Allow from all
+    Options -MultiViews
+  </Directory>
 </VirtualHost>
     EOF
     put vhost_config, "/etc/httpd/conf.d/#{application}.conf"
