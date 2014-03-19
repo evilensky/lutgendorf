@@ -1,15 +1,15 @@
-body,html{font-family: 'Oswald', sans-serif !important; background-image: url(image_path('calm-blue-water.jpg')); color:white}
+body,html{font-family: 'Oswald', sans-serif !important; background-image: url(image_path('background.jpg')); color:white}
 
-.well {background-color:rgba(255,255,255,0.5);}
+.well {background-color:rgba(255,255,255,0.2);}
 
-.slideshow {background-color:rgba(0, 0, 0, 0.25); padding:2em; border-radius:1em;}
+.slideshow {background-color:rgba(255, 255, 255, 0.5); padding:2em; border-radius:1em;}
 
 .main-nav a {display:block; font-size:3em; text-transform: uppercase; color:white; margin:0;}
 .main-nav a:hover {text-decoration: none; color:black;}
 .main-content {text-align: left;}
 .main-content h2 {margin-top:.5em; display:block;}
 
-.main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
+.main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.7em; height:250px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;padding-top:1%;margin-top:40px;position:relative;}
 
 .main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
 
@@ -17,11 +17,28 @@ a.qualtrics-link .main-nav-button {
   position:absolute;
   right:12px;
   top:-183px;
+  height: 150px;
+}
+h1#logo-text {
+  font-size: 60px;
+  position: relative;
+  top: 23px;
 }
 nav.navbar {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   border:none;
   border-radius: 9px;
+  height:65px;
+}
+.tool-text{
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  color: darkslateblue;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  border-radius: 0 0 .5em .5em;
+  width: 100%;
 }
 .tool-nav {}
 .tool-nav h1 {}
@@ -157,6 +174,13 @@ span.form-label-text {
   padding: 15px;
   font-size: 140%;
 }
+div.form-group {
+  margin-top: 20px;
+  background-color:white;
+  padding:15px;
+  border-radius:8px;
+}
+
 div.form-group label{
   font-size:120%;
   position: relative;

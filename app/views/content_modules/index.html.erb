@@ -1,5 +1,4 @@
 <h2>Select Content</h2>
-
 <% content_modules.each do |m| %>
   <% if m.is_released?(current_participant) %>
     <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">

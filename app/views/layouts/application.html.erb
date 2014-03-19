@@ -12,7 +12,9 @@
     <nav class="navbar navbar-default">
       
       <%= render 'shared/home' %>
-
+      <% if @navigator.context == 'home' %>
+        <%= render 'shared/welcome_message' %>
+      <%end%>
       <%= render 'shared/authentication' %>
     </nav>
 

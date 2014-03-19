@@ -1,20 +1,17 @@
 <div class="row main-nav">
   <div class="col-md-12">
-    <img src="/images/logo.png" style="width:60px; height:58px; float:left;margin-top:10px; margin-bottom:10px;"><h1 style="color:darkslateblue;">LivingWell</h1>
-  </div>
-  <div class="col-md-12">
-    <div class="well col-md-8" style="color:darkslateblue;">
-      <h2>Welcome, <%=current_participant.email%>!</h2>
+    <div class="col-md-12">
+      <img src="/images/logo.png" style="width:120px; height:116px; float:left;margin-top:10px; margin-bottom:10px;"><h1 id="logo-text" style="color:darkslateblue;">LivingWell</h1>
     </div>
     <div class="row">
       <div class="col-md-12">
         <% AppSection.all.each do |s| %>
           <% if s.label != "Qualtrics" %>
-            <%= link_to("<div class='main-nav-button home' id='#{s.slug}'>#{ s.label }</div>".html_safe, navigator_context_path(context_name: s.slug)) %>
+            <%= link_to("<div class='main-nav-button home' id='#{s.slug}'><span class='tool-text'>#{ s.label }</span></div>".html_safe, navigator_context_path(context_name: s.slug)) %>
             <%end%>
             
             <% if s.label == "Qualtrics" && s.qualtrics_visible?(current_participant) %>
-              <%= link_to("<div class='main-nav-button home'> #{ s.label }</div>".html_safe, "http://google.com", :class=> 'qualtrics-link') %>
+              <%= link_to("<div class='main-nav-button home'><span class='tool-text'>#{ s.label }</span></div>".html_safe, "http://google.com", :class=> 'qualtrics-link') %>
             </div>
             <% end%>
         <% end %>
