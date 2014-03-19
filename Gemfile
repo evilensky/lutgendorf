@@ -24,6 +24,7 @@ gem 'rvm-capistrano'
 
 group :development do
   gem "debugger"
+  gem 'rubocop'
 end
 
 group :test do

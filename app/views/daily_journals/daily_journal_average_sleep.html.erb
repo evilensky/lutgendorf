@@ -3,9 +3,9 @@
   
  <div class="form-group" style="background-color:white;padding:15px;border-radius:3px;">
   <div class="row form-labels">
-    <div class="col-md-4">Poor</div>
-    <div class="col-md-4">Okay</div>
-    <div class="col-md-4">Excellent</div>
+    <div class="col-md-4"><span class="form-label-text">Poor</span></div>
+    <div class="col-md-4"><span class="form-label-text">Okay</span></div>
+    <div class="col-md-4"><span class="form-label-text">Excellent</span></div>
   </div>
     <%= f.hidden_field :id, :value => daily_journal.id %>
     <%= f.range_field :average_sleep_quality, :in => 0..10, :step => '1', :id => "range" %><Br/>
@@ -13,13 +13,7 @@
   </div>
 <%end%>
 <script>
- $(document).ready(function() {
-  $('#range').ionRangeSlider({
-    min:0,
-    max:10,
-    type:"single",
-    step:1,
-    hasGrid:true
+  $(document).ready(function() {
+    customSlider($('#range'));
   });
-});
 </script>

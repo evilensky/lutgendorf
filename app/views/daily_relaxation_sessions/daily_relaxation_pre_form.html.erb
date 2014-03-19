@@ -3,23 +3,17 @@
 <%= form_for DailyRelaxationSession.new, url: create_path, :html => {:role => "form"} do |f| %>
 
   <div class="form-group" style="background-color:white;padding:15px;border-radius:3px;">
-  <div class="row form-labels">
-    <div class="col-md-4">No Stress</div>
-    <div class="col-md-4">Moderately Stressed</div>
-    <div class="col-md-4">Extremely Stressed</div>
-  </div>
-    <%= f.range_field :pre_stress, :in => 0..10, :step => '1', :id => "range" %><Br/>
+    <div class="row form-labels">
+      <div class="col-md-4"><span class="form-label-text">No Stress</span></div>
+      <div class="col-md-4"><span class="form-label-text">Moderately Stressed</span></div>
+      <div class="col-md-4"><span class="form-label-text">Extremely Stressed</span></div>
+    </div>
+    <%= f.range_field :pre_stress, :in => 0..4, :step => '1', :id => "range" %>
     <%= f.submit "Continue", :class => "form-control btn btn-primary" %>
   </div>
 <%end%>
 <script>
  $(document).ready(function() {
-  $('#range').ionRangeSlider({
-    min:0,
-    max:10,
-    type:"single",
-    step:1,
-    hasGrid:true
+    customSlider($('#range'));
   });
-});
 </script>

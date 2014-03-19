@@ -8,10 +8,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'shared/home' %>
+  <div class="container" id="main-layout">
+    <nav class="navbar navbar-default">
+      
+      <%= render 'shared/home' %>
 
-    <%= render 'shared/authentication' %>
-    <div class="container" id="main-layout">
+      <%= render 'shared/authentication' %>
+    </nav>
 
       <%= yield %>
           

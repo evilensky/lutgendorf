@@ -2,7 +2,7 @@
 <p>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</p>
 
 <%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;background-color:white;padding:30px;border-radius:5px;"} do |f| %>
-  <div class="form-header range-labels">
+  <!-- <div class="form-header range-labels">
     <span>A great deal</span>
     <span>Moderately</span>
     <span>A little bit</span>
@@ -10,7 +10,7 @@
     <span>Moderately</span>
     <span>A great deal</span>
     <br>
-  </div>
+  </div> -->
   <div class="slider-group row">
     <div class="col-md-2">
       <span class='left-text'>hopeless</span>
@@ -106,14 +106,12 @@
 <script>
   $( document ).ready(function() {
 
+    var value_array = ["A great deal", "Moderately", "A little bit", "A little bit", "Moderately", "A great deal"]
+
     $.each($('[type="range"]'), function (index, el){
-      $(el).ionRangeSlider({
-        min:0,
-        max:5,
-        type:"single",
-        step:1,
-        hideMinMax: true
-      });
+
+      customSlider($(el), value_array);
+
     });
 
   });

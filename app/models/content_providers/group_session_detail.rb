@@ -7,7 +7,7 @@ class ContentProviders::GroupSessionDetail < ContentProvider
   end
 
   def data_attributes
-    [:hope, :safety, :comfort, :well_being, :clarity, :understanding, :self_confidence]
+    [:hope, :safety, :comfort, :well_being, :closeness, :clarity, :understanding, :self_confidence]
   end
 
   def data_class_name

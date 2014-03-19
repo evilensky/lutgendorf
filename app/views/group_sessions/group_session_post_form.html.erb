@@ -3,15 +3,15 @@
 <%= form_for group_session_mood_summary, url: update_path, :html => {:role => "form"} do |f| %>
   <div class="form-group" style="background-color:white;padding:15px;border-radius:5px;">
     <div class="row form-labels">
-      <div class="col-md-3 col-md-offset-3">Not at all</div>
-      <div class="col-md-6">Extremely</div>
+      <div class="col-md-3 col-md-offset-3"><span class="form-label-text">Not at all</span></div>
+      <div class="col-md-6"><span class="form-label-text">Extremely</span></div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :post_anxious, "How anxious do you feel right now?" %>
       </div>
       <div class="col-md-9"> 
-        <%= f.range_field :post_anxious, :in => 0..10, :step => '1', :id => 'post_anxious' %>
+        <%= f.range_field :post_anxious, :in => 0..10, :step => '.1', :id => 'post_anxious' %>
       </div>
     </div>
     <div class="row">
@@ -19,7 +19,7 @@
         <%= f.label :post_sad, "How sad or depressed do you feel right now?" %>
       </div>
       <div class="col-md-9"> 
-        <%= f.range_field :post_sad, :in => 0..10, :step => '1', :id => 'post_sad' %>
+        <%= f.range_field :post_sad, :in => 0..10, :step => '.1', :id => 'post_sad' %>
       </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
         <%= f.label :post_confused, "How confused do you feel right now?" %>
       </div>
       <div class="col-md-9"> 
-        <%= f.range_field :post_confused, :in => 0..10, :step => '1', :id => 'post_confused' %>
+        <%= f.range_field :post_confused, :in => 0..10, :step => '.1', :id => 'post_confused' %>
       </div>
     </div>
     <div class="row">
@@ -35,7 +35,7 @@
         <%= f.label :post_energy, "How energetic do you feel right now?" %>
       </div>
       <div class="col-md-9"> 
-        <%= f.range_field :post_energy, :in => 0..10, :step => '1', :id => 'post_energy' %>
+        <%= f.range_field :post_energy, :in => 0..10, :step => '.1', :id => 'post_energy' %>
       </div>
     </div>
     <div class="row">
@@ -43,7 +43,7 @@
         <%= f.label :post_fatigue, "How fatigued do you feel right now?" %>
       </div>
       <div class="col-md-9"> 
-        <%= f.range_field :post_fatigue, :in => 0..10, :step => '1', :id => 'post_fatigue' %>
+        <%= f.range_field :post_fatigue, :in => 0..10, :step => '.1', :id => 'post_fatigue' %>
       </div>
     </div>
     <%= f.hidden_field :id, :value => group_session_mood_summary.id %>
@@ -55,13 +55,7 @@
 
     $.each($('[type="range"]'), function (index, el){
 
-      $(el).ionRangeSlider({
-        min:0,
-        max:10,
-        type:"single",
-        step:1,
-        hasGrid:true
-      });
+      customSlider($(el));
 
     });
   });
