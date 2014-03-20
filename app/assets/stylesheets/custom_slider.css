@@ -16,12 +16,21 @@ input[type="range"] {
   outline: none;
   width: 100%;
   height: 12px;
-  background-color: #CDD0D4;
-  border: 1px solid darken(white, 4%);
+  background: white;
+  border: 2px solid #CDD0D4;
   border-radius: 10px;
   margin: auto;
   transition: all 0.3s ease;
 
+}
+
+input[type='range']::-webkit-slider-thumb {
+   -webkit-appearance: none !important;  
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 30px;
+  transition: all 0.2s ease;
 }
 
 .rangevalue {
@@ -35,17 +44,4 @@ input[type="range"] {
   padding: 5px;
   width: 35px;
   color: white;
-}
-.triangle {
-  background: none;
-  position: absolute;
-  top: 29px;
-  left: 48.83%;
-  right: 0;
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  border-top: 10px solid cornflowerblue;
-  border-radius: 3px;
-  padding: 0;
 }

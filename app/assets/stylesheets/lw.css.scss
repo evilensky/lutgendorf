@@ -105,15 +105,6 @@ a {color:#DDEEEE;}
 
 input {color:black;	}
 
-input[type='range']::-webkit-slider-thumb {
-   -webkit-appearance: none !important;  
-  width: 30px;
-  height: 30px;
-  background-color: orange;
-  border-radius: 30px;
-  transition: all 0.2s ease;
-}
-
 .range {
   display: block;
   font-size: 200%;
@@ -221,7 +212,7 @@ div.disabled-nav {
 }
 
 .btn-primary {
-  background: lighten(cornflowerblue, 5%);
+  background: lighten(cornflowerblue, 3%);
   border: 1px solid cornflowerblue;
   color: ghostwhite;
 }
@@ -231,5 +222,6 @@ div.disabled-nav {
   border: 1px solid darken(cornflowerblue, 8%);
 }
 .btn-lg {
-  padding: 5px;
+  padding: 0px;
+  font-size: 22px;
 }
