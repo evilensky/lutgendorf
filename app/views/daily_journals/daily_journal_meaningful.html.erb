@@ -1,5 +1,5 @@
 <h1>Describe a meaningful moment: </h1>
-<h3 style="color:darkslateblue;">This could be something that gave you strength, or joy, or something you felt grateful for today.</h3><br>
+<h3>This could be something that gave you strength, or joy, or something you felt grateful for today.</h3><br>
 <%= form_for daily_journal, url: update_path, :html => {:method => :put, :role => "form"} do |f| %>
   <div>
     <%= f.text_area :meaningful_text, :class => "form-control" %>
