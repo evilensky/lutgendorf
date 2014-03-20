@@ -15,7 +15,14 @@ h3 {
 .main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.7em; height:250px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;padding-top:1%;margin-top:40px;position:relative;}
 
 .main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
-.main-nav-button.audio { }
+.main-nav-button.audio {
+  width: 240px;
+  height: 103px;
+  background-color: rgba(50, 55, 60, 0.3);
+  border-radius: .5em;
+  text-align: center;
+  margin-top: 20px; 
+}
 a.qualtrics-link .main-nav-button {
   position:absolute;
   right:12px;
@@ -166,8 +173,13 @@ div.form-labels {
   margin-top: 17px;
 }
 span.form-label-text {
-  padding: 15px;
+  border: 2px solid cornflowerblue;
+  padding: 7px;
   font-size: 140%;
+  border-radius: 6px;
+  background: white;
+  color: cornflowerblue;
+  margin-left: 19px;
 }
 div.form-group {
   margin-top: 20px;

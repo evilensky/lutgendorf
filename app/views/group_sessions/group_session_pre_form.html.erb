@@ -57,10 +57,10 @@
       customSlider($(el));
 
     });
-      $('[name="commit"]').on('click', function(){
+    $('[name="commit"]').on('click', function(){
+      debugger;
+      window.open("<%= Webex.next_webex_session %>")
 
-        window.open("<%= Webex.next_webex_session %>")
-
-      });
+    });
   });
 </script>
