@@ -1,16 +1,7 @@
 <h1>The way you felt in group today</h1>
-<h3>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers</h3>
+<h3>In each row below is a word (and its opposite) that people may use to describe themselves. Please select an answer from each row that best describes how you felt in today's group. There are no right or wrong answers.</h3>
 
 <%= form_for GroupSessionMoodDetail.new, url: create_path, :html => {:role => "form", :style => "margin-bottom:20px;background-color:white;padding:30px;border-radius:5px;"} do |f| %>
-  <!-- <div class="form-header range-labels">
-    <span>A great deal</span>
-    <span>Moderately</span>
-    <span>A little bit</span>
-    <span>A little bit</span>
-    <span>Moderately</span>
-    <span>A great deal</span>
-    <br>
-  </div> -->
   <div class="slider-group row">
     <div class="col-md-2">
       <span class='left-text'>hopeless</span>

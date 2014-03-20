@@ -1,4 +1,4 @@
-body,html{font-family: 'Oswald', sans-serif !important; background-image: url(image_path('background.jpg')); color:white}
+body,html{font-family: 'Oswald', sans-serif !important; background-image: url(image_path('background.jpg')); color:white; background-repeat:no-repeat;background-size: cover;}
 h3 {
   color:darkslateblue;
 }
@@ -145,13 +145,14 @@ div.slider-group.row {
   margin: 10px 0px 10px 0px;
 }
 div.slider-group .col-md-2 {
+  border: 2px cornflowerblue solid;
   font-size: 125%;
   position: relative;
   top: 62px;
-  background: darkgrey;
+  background: white;
   padding: 5px;
   border-radius: 4px;
-  color:floralwhite;
+  color:cornflowerblue;
   text-align:center;
 }
 
@@ -204,11 +205,13 @@ div.multi-slide input {
 }
 #daily_journal {
   background-image: url(image_path('yosemite-1.jpeg'));
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+
 }
 #daily_relaxation_practice {
   background-image: url(image_path('woman-meditating.jpg'));
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
 }
 
