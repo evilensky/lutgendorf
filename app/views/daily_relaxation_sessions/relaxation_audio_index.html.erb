@@ -5,7 +5,7 @@
   <li>
       <table>
         <tr>
-          <td style="width:300px;"><h2><%=file.title%><i class="icon-caret-right icon-2x" style="position:relative;bottom:-10px;"></i></h2></td>
+          <td style="width:300px;"><div class='main-nav-button audio'><h2><%=file.title%><i class="icon-caret-right icon-2x" style="position:relative;bottom:-10px;"></i></h2></div></td>
           <td>
             <% if file.is_released?(current_participant) %>
               <audio src="<%=file.sound_file%>" data-id="<%=file.id%>" controls type="audio/mpeg" style="position:relative;bottom:-15px;">
