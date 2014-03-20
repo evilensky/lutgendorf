@@ -15,6 +15,8 @@ gem 'jplayer-rails'
 gem 'font-awesome-sass-rails'
 gem 'bootstrap-wysihtml5-rails'
 gem 'exception_notification'
+gem 'letter_opener', group: :development
+
 
 group :development, :test do
   gem "rspec-rails", "~> 3.0.0.beta2"

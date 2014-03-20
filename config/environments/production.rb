@@ -2,10 +2,11 @@ Lutgendorf::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   
   config.middleware.use ExceptionNotification::Rack,
-  :email => {
-    :email_prefix => "Crash report",
-    :sender_address => %{"notifier" <notifier@lutgendorf.edu>},
-    :exception_recipients => %w{jem.hilton@gmail.com}
+    :email => {
+      :email_prefix => "[Crash report] ",
+      :sender_address => %{"notifier" <notifier@lutgendorf.edu>},
+      :exception_recipients => %w{jem.hilton@gmail.com}
+    }
   # Code is not reloaded between requests.
   config.cache_classes = true
 

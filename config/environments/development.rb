@@ -1,5 +1,20 @@
 Lutgendorf::Application.configure do
   config.action_mailer.default_url_options = {host: "http://localhost:3000"}
+
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[Crash report] ",
+      :sender_address => %{"notifier" <notifier@lutgendorf.edu>},
+      :exception_recipients => %w{jem.hilton@gmail.com}
+    }
+  config.action_mailer.delivery_method = :letter_opener
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   :location => '/usr/sbin/sendmail',
+  #   :arguments => '-i -t'
+  # }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -13,9 +28,6 @@ Lutgendorf::Application.configure do
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
