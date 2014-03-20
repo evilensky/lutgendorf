@@ -14,6 +14,7 @@ gem 'redcarpet', '~> 2.3.0'
 gem 'jplayer-rails'
 gem 'font-awesome-sass-rails'
 gem 'bootstrap-wysihtml5-rails'
+gem 'exception_notification'
 
 group :development, :test do
   gem "rspec-rails", "~> 3.0.0.beta2"
