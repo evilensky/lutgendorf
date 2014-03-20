@@ -15,7 +15,7 @@ h3 {
 .main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.7em; height:250px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;padding-top:1%;margin-top:40px;position:relative;}
 
 .main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
-
+.main-nav-button.audio { }
 a.qualtrics-link .main-nav-button {
   position:absolute;
   right:12px;
@@ -148,7 +148,7 @@ div.slider-group .col-md-2 {
   border: 2px cornflowerblue solid;
   font-size: 125%;
   position: relative;
-  top: 62px;
+  top: 58px;
   background: white;
   padding: 5px;
   border-radius: 4px;
@@ -186,13 +186,14 @@ div.form-group {
 }
 
 div.form-group label{
+  border: 2px solid cornflowerblue;
   font-size:120%;
   position: relative;
-  top: 40px;
-  background: cornflowerblue;
+  top: 36px;
+  background: white;
   padding: 19px;
   border-radius: 4px;
-  color:white;
+  color:cornflowerblue;
   text-align:center;
   font-weight:inherit;
 }
@@ -217,4 +218,18 @@ div.multi-slide input {
 
 div.disabled-nav {
   color:gray;
+}
+
+.btn-primary {
+  background: lighten(cornflowerblue, 5%);
+  border: 1px solid cornflowerblue;
+  color: ghostwhite;
+}
+.btn-primary:hover {
+  background: cornflowerblue;
+  color: ghostwhite;
+  border: 1px solid darken(cornflowerblue, 8%);
+}
+.btn-lg {
+  padding: 5px;
 }
