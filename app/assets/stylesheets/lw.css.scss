@@ -2,7 +2,6 @@ body,html{font-family: 'Oswald', sans-serif !important; background-image: url(im
 
 .well {background-color:rgba(255,255,255,0.2);}
 
-.slideshow {background-color:rgba(255, 255, 255, 0.5); padding:2em; border-radius:1em;}
 .slideshow .slide-body{font-size:150%;}
 
 .main-nav a {display:block; font-size:3em; text-transform: uppercase; color:white; margin:0;}
@@ -10,9 +9,9 @@ body,html{font-family: 'Oswald', sans-serif !important; background-image: url(im
 .main-content {text-align: left;}
 .main-content h2 {margin-top:.5em; display:block;}
 
-.main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.7em; height:250px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;padding-top:1%;margin-top:40px;position:relative;}
+.main-nav-button.home {width:23%; margin-right:2%; float:left; font-size:.7em; height:250px; background-color:rgba(50,55,60,0.3);border:4px solid gray; padding-right:1%; padding-left:1%;padding-top:1%;margin-top:40px;position:relative;}
 
-.main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3);  border-radius:.5em; padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
+.main-nav-button {width:18%; margin-right:2%; float:left; font-size:.8em; height:150px; background-color:rgba(50,55,60,0.3); padding-right:1%; padding-left:1%;text-align:center;padding-top:1%;margin-top:40px;}
 .main-nav-button.audio {
   width: 240px;
   height: 103px;
@@ -33,10 +32,9 @@ h1#logo-text {
   top: 23px;
 }
 nav.navbar {
-  background-color: rgba(255, 255, 255, 0.5);
-  border:none;
-  border-radius: 9px;
+  background:none;
   height:65px;
+  border: none;
 }
 .tool-text{
   position: absolute;
@@ -45,13 +43,20 @@ nav.navbar {
   color: darkslateblue;
   background: rgba(255, 255, 255, 0.8);
   padding: 3px;
-  border-radius: 0 0 .5em .5em;
   width: 100%;
 }
 .tool-nav {}
 .tool-nav h1 {}
 .tool-nav h2 {}
 .tool-nav h3 {}
+
+div.radio-group .radio-inline {
+  padding-left: 65px;
+  width: 18%;
+  color: black;
+  border: none;
+  background: none
+}
 
 input.form-button {
 	margin-top: 8px;
@@ -184,11 +189,9 @@ div.form-group {
 }
 
 div.form-group label{
-  border: 2px solid cornflowerblue;
   font-size:120%;
   position: relative;
   top: 36px;
-  background: rgba(0, 0, 0, 0.1);
   padding: 19px;
   border-radius: 4px;
   color:cornflowerblue;

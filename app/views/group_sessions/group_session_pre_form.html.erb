@@ -6,44 +6,64 @@
       <div class="col-md-3 col-md-offset-3"><span class="form-label-text">Not at all</span></div>
       <div class="col-md-6"><span class="form-label-text">Extremely</span></div>
     </div>
-    <div class="row">
+        <div class="row">
       <div class="col-md-3">
         <%= f.label :pre_anxious, "How anxious do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :pre_anxious, :in => 0..10, :step => '.1', :id => 'pre_anxious' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :pre_anxious, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :pre_sad, "How sad or depressed do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :pre_sad, :in => 0..10, :step => '.1', :id => 'pre_sad' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :pre_sad, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :pre_confused, "How confused do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :pre_confused, :in => 0..10, :step => '.1', :id => 'pre_confused' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :pre_confused, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :pre_energy, "How energetic do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :pre_energy, :in => 0..10, :step => '.1', :id => 'pre_energy' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :pre_energy, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :pre_fatigue, "How fatigued do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :pre_fatigue, :in => 0..10, :step => '.1', :id => 'pre_fatigue' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :pre_fatigue, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <%= f.submit "Go to your webex session", :class => "form-control btn btn-primary btn-lg" %>
@@ -52,11 +72,6 @@
 <script>
   $( document ).ready(function() {
 
-    $.each($('[type="range"]'), function (index, el){
-
-      customSlider($(el));
-
-    });
     $('[name="commit"]').on('click', function(){
   
       window.open("<%= Webex.next_webex_session %>")

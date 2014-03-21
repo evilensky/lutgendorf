@@ -10,53 +10,63 @@
       <div class="col-md-3">
         <%= f.label :post_anxious, "How anxious do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :post_anxious, :in => 0..10, :step => '.1', :id => 'post_anxious' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :post_anxious, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :post_sad, "How sad or depressed do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :post_sad, :in => 0..10, :step => '.1', :id => 'post_sad' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :post_sad, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :post_confused, "How confused do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :post_confused, :in => 0..10, :step => '.1', :id => 'post_confused' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :post_confused, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :post_energy, "How energetic do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :post_energy, :in => 0..10, :step => '.1', :id => 'post_energy' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :post_energy, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <%= f.label :post_fatigue, "How fatigued do you feel right now?" %>
       </div>
-      <div class="col-md-9"> 
-        <%= f.range_field :post_fatigue, :in => 0..10, :step => '.1', :id => 'post_fatigue' %>
+      <div class="col-md-9 radio-group">
+        <% [ 0, 1, 2, 3, 4 ].each do |tag| %>
+          <label class="radio-inline">
+            <%=tag%><%= f.radio_button :post_fatigue, tag%>
+          </label>
+        <% end %>
       </div>
     </div>
     <%= f.hidden_field :id, :value => group_session_mood_summary.id %>
     <%= f.submit "Continue", :class => "form-control btn btn-primary btn-lg" %>
   </div>
 <%end%>
-<script>
-  $( document ).ready(function() {
-
-    $.each($('[type="range"]'), function (index, el){
-
-      customSlider($(el));
-
-    });
-  });
-</script>
