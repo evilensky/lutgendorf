@@ -8,7 +8,7 @@
     <div class="col-md-4"><span class="form-label-text">Excellent</span></div>
   </div>
     <%= f.hidden_field :id, :value => daily_journal.id %>
-    <%= f.range_field :average_sleep_quality, :in => 0..10, :step => '1', :id => "range" %><Br/>
+    <%= f.range_field :average_sleep_quality, :in => 0..10, :step => '.1', :id => "range" %><Br/>
     <%= f.submit "Continue", :class => "form-control btn btn-primary btn-lg" %>
   </div>
 <%end%>
