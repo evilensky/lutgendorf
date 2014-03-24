@@ -1,12 +1,11 @@
-<h2>Select Content</h2>
 <% content_modules.each do |m| %>
   <% if m.is_released?(current_participant) %>
     <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
-      <h3><%= link_to m.title, navigator_location_path(module_id: m.id)%></h3>
+      <%= link_to m.title, navigator_location_path(module_id: m.id), :class=>"tool-text lesson-text"%>
     </div>
   <% else %>
     <div class="disabled-nav main-nav-button">
-      <h3><%= m.title %></h3>
+      <span class="tool-text lesson-text"><%= m.title %></span>
     </div>
   <% end %>
 <% end %>
