@@ -1,12 +1,12 @@
-<% content_modules.each do |m| %>
+<% content_modules.each_with_index do |m, idx| %>
   <% if m.is_released?(current_participant) %>
     <%= link_to navigator_location_path(module_id: m.id) do%>
-      <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>">
+      <div class="<%= context == 'lesson' ? 'main-nav-button' : ''%>" id="lesson-<%=idx%>">
         <span class="tool-text lesson-text"><%=m.title%></span>
       </div>
     <%end%>
   <% else %>
-    <div class="disabled-nav main-nav-button">
+    <div class="disabled-nav main-nav-button" id="lesson-<%=idx%>">
       <span class="tool-text lesson-text"><%= m.title %></span>
     </div>
   <% end %>

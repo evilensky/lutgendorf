@@ -1,8 +1,8 @@
 class AppSection
   SECTIONS = {
     daily_relaxation_practice: 'Daily Relaxation',
-    daily_journal: 'Daily Journal',
     lesson: 'Weekly Overview',
+    daily_journal: 'Daily Journal',
     webex_session: 'Webex Session',
     qualtrics_assessment: 'Qualtrics'
   }
