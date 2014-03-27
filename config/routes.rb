@@ -10,5 +10,5 @@ Lutgendorf::Application.routes.draw do
   resource :flow, only: :show
 
   root to: 'navigator#show_context'  
-  
+
 end
