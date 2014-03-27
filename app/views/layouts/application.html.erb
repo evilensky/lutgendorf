@@ -11,7 +11,7 @@
   <div class="container" id="main-layout">
     <nav class="navbar navbar-default">
       
-      <%= render 'shared/home' %>
+      <%= render 'shared/home' unless @navigator and @navigator.context == 'home' %>
       <% if @navigator and @navigator.context == 'home' %>
         <%= render 'shared/welcome_message' %>
       <%end%>

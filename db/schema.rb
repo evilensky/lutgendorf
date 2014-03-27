@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312212724) do
+ActiveRecord::Schema.define(version: 20140327153356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,9 @@ ActiveRecord::Schema.define(version: 20140312212724) do
     t.integer  "participant_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "session_satisfaction"
+    t.integer  "session_desire_for_future"
+    t.integer  "session_stress"
   end
 
   add_index "group_session_mood_details", ["participant_id"], name: "index_group_session_mood_details_on_participant_id", using: :btree

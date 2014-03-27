@@ -2,7 +2,7 @@ body,html{font-family: 'Oswald', sans-serif !important; background-image: url(im
 
 .well {background-color:rgba(255,255,255,0.2);}
 
-.slideshow .slide-body{font-size:150%;}
+.slideshow .slide-body{color:darkslateblue;font-size:175%;}
 
 .main-nav a {display:block; font-size:3em; text-transform: uppercase; color:white; margin:0;}
 .main-nav a:hover {text-decoration: none; color:black;}
@@ -26,6 +26,7 @@ a.qualtrics-link .main-nav-button {
   top:-183px;
   height: 150px;
 }
+h1, h2, h3{color:darkslateblue;}
 h1#logo-text {
   font-size: 60px;
   position: relative;
@@ -131,7 +132,7 @@ input {color:black;	}
  div.range-labels {
   margin-left: 17%;
   margin-bottom: 20px;
-  color:cornflowerblue;
+  color:darkslateblue;
 }
 
 div.range-labels span {
@@ -150,18 +151,18 @@ div.slider-group.row {
   margin: 10px 0px 10px 0px;
 }
 div.slider-group .col-md-2 {
-  font-size: 125%;
+  font-size: 175%;
   position: relative;
-  top: 58px;
+  top: 51px;
   padding: 5px;
   border-radius: 4px;
-  color:cornflowerblue;
+  color:darkslateblue;
   text-align:center;
 }
 
 div.form-labels div{
  text-align:center;
- color:cornflowerblue;
+ color:darkslateblue;
  font-size: 110%
 }
 div.form-labels div:first-child{
@@ -180,7 +181,7 @@ div.form-labels {
 span.form-label-text {
   padding: 7px;
   font-size: 140%;
-  color: cornflowerblue;
+  color: darkslateblue;
   margin-left: 19px;
 }
 div.form-group {
@@ -191,12 +192,12 @@ div.form-group {
 }
 
 div.form-group label{
-  font-size:120%;
+  font-size:140%;
   position: relative;
   top: 36px;
   padding: 19px;
   border-radius: 4px;
-  color:cornflowerblue;
+  color:darkslateblue;
   text-align:center;
   font-weight:inherit;
 }
@@ -222,16 +223,19 @@ div.multi-slide input {
 div.disabled-nav {
   color:lightgray;
 }
+div.disabled-nav .tool-text{
+  color:gray;
+}
 
 .btn-primary {
-  background: lighten(cornflowerblue, 3%);
-  border: 1px solid cornflowerblue;
+  background: lighten(darkslateblue, 3%);
+  border: 1px solid darkslateblue;
   color: ghostwhite;
 }
 .btn-primary:hover {
-  background: cornflowerblue;
+  background: darkslateblue;
   color: ghostwhite;
-  border: 1px solid darken(cornflowerblue, 8%);
+  border: 1px solid darken(darkslateblue, 8%);
 }
 .btn-lg {
   height: 45px;
