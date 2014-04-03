@@ -1,8 +1,8 @@
 class AppSection
   SECTIONS = {
     daily_relaxation_practice: 'Daily Relaxation',
-    lesson: 'Weekly Overview',
     daily_journal: 'Daily Journal',
+    lesson: 'Weekly Overview',
     webex_session: 'Webex Session',
     qualtrics_assessment: 'Qualtrics'
   }
@@ -33,6 +33,14 @@ class AppSection
       return true
     else
       return false
+    end
+  end
+
+  def qualtrics_link(current_participant)
+    if Date.today - current_participant.study_start_date.to_date < 7 
+      return "https://uiowa.qualtrics.com/SE/?SID=SV_bIWhxLxU09fV3x3"
+    else
+      return "#"
     end
   end
 

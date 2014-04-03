@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ContentProviders::GroupSessionFinal","ParticipantStatus", "VideoSlide"]
+  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ContentProviders::GroupSessionFinal","ParticipantStatus", "VideoSlide", "ContentProvider", "ContentModule"]
 
   config.model Participant do
     
@@ -63,6 +63,7 @@ RailsAdmin.config do |config|
   end
 
   config.model GroupSessionMoodDetail do
+    navigation_label "Participant data"
     label "Group Session Eval" 
     label_plural "Group Session Evals"
 
@@ -86,6 +87,7 @@ RailsAdmin.config do |config|
   end
   
   config.model Listening do
+    navigation_label "Participant data"
     list do
       field :daily_relaxation_session
       field :relaxation_audio
@@ -97,6 +99,7 @@ RailsAdmin.config do |config|
   end
 
   config.model GroupSessionMoodSummary do
+    navigation_label "Participant data"
     label "MINI POM" 
     label_plural "MINI POMS"
 
@@ -120,6 +123,7 @@ RailsAdmin.config do |config|
   end
 
   config.model DailyRelaxationSession do
+    navigation_label "Participant data"
 
     list do
       field :participant
@@ -138,6 +142,7 @@ RailsAdmin.config do |config|
   end
   
   config.model DailyJournal do
+    navigation_label "Participant data"
 
     list do
       field :participant
@@ -157,6 +162,21 @@ RailsAdmin.config do |config|
     list do
       field :meeting_time
       field :url
+    end
+  end
+
+  config.model ContentRelease do
+    object_label_method :day
+  end
+  
+  def day
+    "#{self.release_date}"
+  end
+
+  config.model Slideshow do
+    list do
+      field :title
+      field :content_release
     end
   end
 

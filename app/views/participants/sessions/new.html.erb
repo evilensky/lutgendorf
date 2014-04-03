@@ -1,21 +1,27 @@
-<img src="/images/logo.png" style="width:120px; height:116px; float:left; margin-bottom:10px; margin-right: 20px;"><h2 style="color:darkslateblue;">Welcome to Living WELL (Web Enhanced Lessons for Living)!</h2>
-<h3>Please enter your username and password to get started</h3>
+<img src="/images/logo.png" style="width:150px; height:140px; float:left; margin-bottom:10px; margin-right: 20px;">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:style => "clear:both; font-size:130%;"}) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true, :class=>"form-control" %></div><br>
+<h2 style="color:darkslateblue;">Welcome to Living <strong>WELL</strong>: Web Enhanced Lessons for Living for Ovarian Cancer Survivors</h2>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password, :class=>"form-control" %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+<div class="row">
+  <div class='col-md-6'>
+  <h3>Please enter your username and password to get started</h3>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:style => "clear:both; font-size:130%;"}) do |f| %>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true, :class=>"form-control" %></div><br>
 
-  <div><%= f.submit "Sign in", :class=>"form-control btn btn-primary" %></div>
-<% end %>
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password, :class=>"form-control" %></div>
 
-<%= render "participants/shared/links" %>
+      <% if devise_mapping.rememberable? -%>
+        <div class="checkbox"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end -%>
+
+      <div><%= f.submit "Sign in", :class=>"btn btn-primary" %></div>
+    <% end %>
+  </div>
+</div>
+
 <div class="attribution">
   <p>This program is made possible by the Iowa Cancer Consortium and the Iowa Department of Public Health</p>
 </div>
