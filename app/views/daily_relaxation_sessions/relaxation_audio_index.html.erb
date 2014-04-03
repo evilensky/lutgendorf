@@ -1,5 +1,16 @@
 <h1>Instructions</h1>
 
+<%= form_for Listening.new, url: create_path, :html => {:method => :post, :role => "form"} do |f| %>
+  <div class="checkbox">
+    <%= f.label :self_guided do %>
+      <%= f.check_box :self_guided %>
+      Check if you prefer to guide this relaxation session without audio.
+    <% end %>
+    <%= f.hidden_field :daily_relaxation_session_id , value: current_relaxation_session.id %>
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <% audio_files.each do |file| %>
   <div class="row">
     <div class="col-md-4">

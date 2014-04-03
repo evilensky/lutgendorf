@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327153356) do
+ActiveRecord::Schema.define(version: 20140403160607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20140327153356) do
     t.integer  "relaxation_audio_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "self_guided",                 default: false
   end
 
   add_index "listenings", ["daily_relaxation_session_id"], name: "index_listenings_on_daily_relaxation_session_id", using: :btree
@@ -141,6 +142,9 @@ ActiveRecord::Schema.define(version: 20140327153356) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "study_start_date"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "study_identification"
   end
 
   add_index "participants", ["email"], name: "index_participants_on_email", unique: true, using: :btree

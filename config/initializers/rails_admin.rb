@@ -33,27 +33,131 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ParticipantStatus", "VideoSlide"]
+  config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ContentProviders::GroupSessionFinal","ParticipantStatus", "VideoSlide"]
 
   config.model Participant do
     
     object_label_method :email
 
     list do
+      field :study_identification
+      field :first_name
+      field :last_name
       field :email
-      field :id
       field :study_start_date
     end
-    
+
+    edit do
+      field :study_identification
+      field :first_name
+      field :last_name
+      field :email
+      field :study_start_date
+      field :password
+      field :password_confirmation
+    end
   end
   
   def email
     return "#{self.email}"
   end
 
+  config.model GroupSessionMoodDetail do
+    label "Group Session Eval" 
+    label_plural "Group Session Evals"
+
+    list do
+      field :participant
+      field :created_at
+      field :hope
+      field :safety
+      field :comfort
+      field :closeness
+      field :well_being
+      field :clarity
+      field :understanding
+      field :self_confidence
+      field :session_satisfaction
+      field :session_desire_for_future
+      field :session_stress
+
+      filters [:participant, :created_at]
+    end
+  end
+  
+  config.model Listening do
+    list do
+      field :daily_relaxation_session
+      field :relaxation_audio
+      field :self_guided
+      field :created_at
+
+      filters [:created_at]
+    end
+  end
+
+  config.model GroupSessionMoodSummary do
+    label "MINI POM" 
+    label_plural "MINI POMS"
+
+    list do
+      field :participant
+      field :created_at
+      field :pre_anxious
+      field :pre_sad
+      field :pre_confused
+      field :pre_energy
+      field :pre_fatigue
+      field :post_anxious
+      field :post_sad
+      field :post_confused
+      field :post_energy
+      field :post_fatigue
+      
+
+      filters [:participant, :created_at]
+    end
+  end
+
+  config.model DailyRelaxationSession do
+
+    list do
+      field :participant
+      field :listenings
+      field :pre_stress
+      field :post_stress
+      field :created_at do
+        label "started"
+      end
+      field :updated_at do
+        label "ended"
+      end
+
+      filters [:participant, :created_at]
+    end
+  end
+  
+  config.model DailyJournal do
+
+    list do
+      field :participant
+      field :created_at
+      field :average_stress
+      field :average_sleep_quality
+      field :meaningful_text
+      
+      filters [:participant, :created_at]
+    end
+  end
+
   config.model Webex do
     label "Webex Session Date" 
     label_plural "Webex Session Dates"
+
+    list do
+      field :meeting_time
+      field :url
+    end
   end
 
   config.model Slide do

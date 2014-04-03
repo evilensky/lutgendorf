@@ -9,7 +9,7 @@ class ContentProviders::RelaxationAudioIndex < ContentProvider
   end
 
   def data_attributes
-  [:relaxation_audio_id, :daily_relaxation_session_id]
+  [:relaxation_audio_id, :daily_relaxation_session_id, :self_guided]
   end
 
   def data_class_name
