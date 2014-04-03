@@ -81,6 +81,8 @@ namespace :deploy do
 </VirtualHost>
 
 <VirtualHost *:443>
+  PassengerRuby /usr/local/rvm/wrappers/ruby-2.0.0-p353/ruby
+
   ServerName lutgendorf.northwestern.edu
 
   SSLEngine On
