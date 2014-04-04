@@ -35,6 +35,19 @@ RailsAdmin.config do |config|
 
   config.excluded_models = ["ContentProviders::DailyJournalAverageSleep", "ContentProviders::DailyJournalAverageStress", "ContentProviders::DailyJournalMeaningful", "ContentProviders::DailyRelaxationPostForm", "ContentProviders::DailyRelaxationPreForm", "ContentProviders::GroupSessionDetail", "ContentProviders::GroupSessionPostForm", "ContentProviders::GroupSessionPreForm", "ContentProviders::Home", "ContentProviders::ModuleCompleteProvider", "ContentProviders::ModuleIndexProvider", "ContentProviders::RelaxationAudioIndex", "ContentProviders::SlideshowProvider", "ContentProviders::GroupSessionFinal","ParticipantStatus", "VideoSlide", "ContentProvider", "ContentModule"]
 
+  config.model User do
+    
+    list do
+      field :email
+    end
+
+    edit do
+      field :email
+      field :password
+      field :password_confirmation
+    end
+  end
+  
   config.model Participant do
     
     object_label_method :email
