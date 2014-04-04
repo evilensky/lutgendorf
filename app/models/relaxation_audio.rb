@@ -6,7 +6,7 @@ class RelaxationAudio < ActiveRecord::Base
   validates_attachment_content_type :sound_file, :content_type => [ 'application/mp3', 'application/x-mp3', 'audio/mpeg', 'audio/mp3' ],
                                     :message => 'file must be of filetype .mp3'
 
-  validates_attachment_size :sound_file, :less_than => 10.megabytes
+  validates_attachment_size :sound_file, :less_than => 35.megabytes
 
   has_many :listenings
   
