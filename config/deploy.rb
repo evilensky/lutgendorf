@@ -76,8 +76,8 @@ namespace :deploy do
   task :create_vhost, :roles => :web do
     vhost_config =<<-EOF
 <VirtualHost *:80>
-  ServerName lutgendorf.northwestern.edu
-  Redirect permanent / https://lutgendorf.northwestern.edu/
+  ServerName livingwell.northwestern.edu
+  Redirect permanent / https://livingwell.northwestern.edu/
 </VirtualHost>
 
 <VirtualHost *:443>
