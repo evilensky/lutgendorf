@@ -2,7 +2,7 @@ class ContentProviders::RelaxationAudioIndex < ContentProvider
   def render_current(options)
     options.view_context.render(template: 'daily_relaxation_sessions/relaxation_audio_index', locals: {
         create_path: options.view_context.participant_data_path, 
-        audio_files: RelaxationAudio.all,
+        audio_files: RelaxationAudio.joins(:content_release).order('content_releases.release_date'),
         current_relaxation_session: options.participant.daily_relaxation_sessions.last
       }
     )
