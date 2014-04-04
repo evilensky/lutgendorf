@@ -83,7 +83,7 @@ namespace :deploy do
 <VirtualHost *:443>
   PassengerRuby /usr/local/rvm/wrappers/ruby-2.0.0-p353/ruby
 
-  ServerName lutgendorf.northwestern.edu
+  ServerName livingwell.northwestern.edu
 
   SSLEngine On
   SSLCertificateFile /etc/pki/tls/certs/cbits-railsapps.nubic.northwestern.edu.crt
