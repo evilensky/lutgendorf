@@ -39,16 +39,17 @@ nav.navbar {
 }
 .tool-text{
   position: absolute;
-  bottom: 0;
+  bottom: -1.5em;
   right: 0px;
   color: darkslateblue;
-  background: rgba(255, 255, 255, 0.5);
-  padding: 3px;
+  padding: 1%;
+  margin: 1%;
   width: 100%;
 }
 .tool-text.lesson-text {
   font-size: 19px;
   text-transform: uppercase;
+  bottom: -1.75em;
 }
 .tool-nav {}
 .tool-nav h1 {}
