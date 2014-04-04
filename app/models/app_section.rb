@@ -40,7 +40,7 @@ class AppSection
     if Date.today - current_participant.study_start_date.to_date < 7 
       return "https://uiowa.qualtrics.com/SE/?SID=SV_bIWhxLxU09fV3x3"
     else
-      return "#"
+      return "https://uiowa.qualtrics.com/SE/?SID=SV_0NHXR2bnjq45NWZ"
     end
   end
 
