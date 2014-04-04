@@ -6,8 +6,9 @@
       <%= f.check_box :self_guided %>
       Check if you prefer to guide this relaxation session without audio.
     <% end %>
-    <%= f.hidden_field :daily_relaxation_session_id , value: current_relaxation_session.id %>
-    <%= f.submit %>
+    <br>
+    <%= f.hidden_field :daily_relaxation_session_id , value: current_relaxation_session.id%>
+    <%= f.submit 'Complete self-guided medtitation', :class => 'btn btn-primary'  %>
   </div>
 <% end %>
 
